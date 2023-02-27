@@ -27,7 +27,6 @@ function deconnexionBDD($cnx)
 }
 
 function newTypes($pdo, $id, $libelle,){
-    //$date = NOW();
     $sql = "INSERT INTO `types`(`idTypes`, `libelle`) \n"
      . "VALUES (:id,:libelle);";
     $test=$pdo->prepare($sql);
