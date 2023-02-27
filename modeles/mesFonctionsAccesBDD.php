@@ -45,7 +45,21 @@ function listerBiens($pdo){
     return $biens;
 }
 
-function getUnBien($pdo, $unId){
+function ChercheBien($pdo,$type,$ville)
+{
+    $sql = " SELECT * FROM Biens INNER JOIN Types ON idType = idTypes WHERE ville = '$ville' AND libelle = '$type'";
+    $test=$pdo->prepare($sql);
+    $test->execute();
+    $lesBiens=$test->fetchAll();
+    return $lesBiens;
+}
+
+
+
+
+
+
+/*function getUnBien($pdo, $unId){
     $sql = "SELECT prix FROM `biens` WHERE id= :id";
     $objet=$pdo->prepare($sql);
     $objet->bindValue(':id',$unId,PDO::PARAM_INT);
@@ -58,37 +72,4 @@ function getUnBien($pdo, $unId){
     return $leBien;
     
 }    
-
-
-
-
-
-    
-    /*array(':id' => $unId)
-     * 
-     * mysql_connect('localhost', 'root', '');
-    mysql_select_db('test');
-    mysql_set_charset('utf8');
-    $result = mysql_query($sql);
-
-    if(false !== $result) 
-    {
-        if(mysql_num_rows($result) > 0)
-        {
-            echo '<table border="1">';
-        
-            $row = mysql_fetch_assoc($result);
-        
-            echo '<tr><th>', implode('</th><th>', array_keys($row)), '</th></tr>';
-        
-            do
-            {
-                echo '<tr><td>', implode('</td><td>', $row), '</td></tr>';
-            }
-            while($row = mysql_fetch_row($result));
-        
-            echo '</table>';
-        }
-    
-        mysql_free_result($result);    
-    } */
+*/
