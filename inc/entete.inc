@@ -5,7 +5,7 @@
                 <p><a href="acheter/acheter-categories.html">Acheter</a></p>
                 <p><a href="#">Vendre</a></p>
                 <p><a href="#">Louer</a></p>
-                <button onclick="window.location.href = 'pages/contact.html';">Contact</button>
+                <button onclick="window.location.href = 'vuesControleur/rechercheBiens.php';">Chercher un Bien</button>
             </div>
         </nav>
     </header>
