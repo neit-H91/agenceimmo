@@ -1,7 +1,7 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <link rel="stylesheet" href="../styles/styleheader.css" media="screen" type="text/css" />
+        <link rel="stylesheet" href="../css/style-accueil.css" media="screen" type="text/css" />
 
     </head>
     <body>
@@ -12,6 +12,7 @@
         </header>
         
         <div id="Aligne-choix">
+            <link rel="stylesheet" href="../css/style-rechercheBien.css" media="screen" type="text/css" />
             <!-- zone de connexion -->
             <form action="verification.php" method="POST">
 
@@ -31,7 +32,7 @@
 
         </div>
         <footer>
-            <link rel="stylesheet" href="../styles/stylefooter.css" media="screen" type="text/css" />
+            <link rel="stylesheet" href="../css/style-accueil.css" media="screen" type="text/css" />
             <?php
             include('../inc/piedDePage.php');
             ?> 
