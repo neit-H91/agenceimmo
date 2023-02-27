@@ -1,0 +1,43 @@
+@font-face {
+    font-family: Helvetica;
+    src: url(../fonts/Helvetica-Font/Helvetica.ttf);
+}
+
+@font-face {
+    font-family: Futura;
+    src: url(../fonts/futura/futura\ medium\ bt.ttf);
+}
+
+footer{
+    position: sticky;
+    top: 100%;
+    margin: 0;
+    padding: 20px;
+    background: linear-gradient( #0062ff,#0026ff);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+footer h3{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 800;
+}
+
+footer p{
+    font-family: Arial, Helvetica, sans-serif;
+    cursor: pointer;
+    footer: letter-spacing: 0px;
+    transition: letter-spacing 0.3s, color 0.3s;
+}
+
+footer p:hover{
+    color: #cccccc;
+    letter-spacing: 1px;
+}
+
+footer a{
+    text-decoration: none;
+    color: white;
+}
