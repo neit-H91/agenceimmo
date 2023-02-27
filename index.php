@@ -1,26 +1,18 @@
-<?php
-
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Immobilier</title>
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-    <header>
-        <nav>
-            <h1><a href="index.html">Immobilier</a></h1>
-            <div class="right">
-                <p><a href="pages/acheter/acheter-categories.html">Acheter</a></p>
-                <p><a href="#">Vendre</a></p>
-                <p><a href="#">Louer</a></p>
-                <p><a class="btn-contact" href="pages/contact.html">Contact</a></p>
-            </div>
-        </nav>
-    </header>
-
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Immobilier</title>
+        <link rel="stylesheet" href="css/style-accueil.css">
+    </head>
+    <body>
+        <header>
+        <?php
+            include('inc/entete.inc');
+        ?>
+        </header>
+    
     <section class="welcome">
         <div class="welcome-content">
             <p>Bienvenue sur le site !
@@ -52,24 +44,13 @@
             <img src="img/appart/appart1/img1.jpg" alt="">
         </div>
     </section>
-
-    <footer>
-        <div class="column">
-            <h3>Achat</h3>
-            <p>Maison</p>
-            <p>Apartement</p>
-            <p>Locaux</p>
-            <p>Terrains</p>
-            <p>Immeubles</p>
-        </div>
-        <div class="column">
-            <h3>Vente</h3>
-            <p>Maison</p>
-            <p>Apartement</p>
-            <p>Locaux</p>
-            <p>Terrains</p>
-            <p>Immeubles</p>
-        </div>
-    </footer>
+     
+    <footer>    
+    <?php
+       include('../inc/piedDePage.php');
+    ?> 
+    </footer>   
+        
 </body>
 </html>
+
