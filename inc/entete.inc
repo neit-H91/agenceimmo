@@ -1,5 +1,5 @@
     <header>
-        <nav>
+        <nav> 
             <h1><a href="../index.html">Immobilier</a></h1>
             <div class="right">
                 <p><a href="acheter/acheter-categories.html">Acheter</a></p>
