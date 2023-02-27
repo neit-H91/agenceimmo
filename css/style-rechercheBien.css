@@ -1,0 +1,18 @@
+#Aligne-choix{
+    display:flex ;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    
+}
+
+input{
+    margin-bottom: 3%;
+}
+
+#Boite-bouton{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
