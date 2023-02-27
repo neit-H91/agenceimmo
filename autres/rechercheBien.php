@@ -7,7 +7,7 @@
     <body>
         <header>
             <?php
-            include('../inc/header.php');
+            include('../inc/entete.inc');
             ?>
         </header>
         
@@ -33,7 +33,7 @@
         <footer>
             <link rel="stylesheet" href="../styles/stylefooter.css" media="screen" type="text/css" />
             <?php
-            include('../inc/footer.php');
+            include('../inc/piedDePage.php');
             ?> 
         </footer>
     </body>
