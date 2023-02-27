@@ -6,7 +6,7 @@
  */
 
 //on insère le fichier qui contient les fonctions
-include_once '../modele/mesFonctions.php';
+include_once '../modeles/mesFonctionsAccesAuxDonnees.php';
 
 //appel de la fonction qui permet de se connecter à la base de données
 $lePdo = connexionBDD();
