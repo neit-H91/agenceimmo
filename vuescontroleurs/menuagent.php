@@ -5,7 +5,7 @@
 <body>
     <header>
         <?php
-        include('header.php');
+        include('inc/entete.inc');
         ?>
     </header>
     <div id="page">
