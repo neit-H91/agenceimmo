@@ -6,7 +6,7 @@
 
 	<h1>Formulaire de recherche</h1>
 
-	<form method="post" action="script.php">
+	<form method="post" action="../autres/rechercheBien.php">
 		<label for="parametre1">Paramètre 1 :</label>
 		<input type="text" id="parametre1" name="parametre1"><br><br>
 
