@@ -12,7 +12,7 @@
         <div id="page">
             <div id="contenu">
                 <h1>Connexion</h1>
-                <form action="verification.php" method="POST">
+                <form action="../autres/verification.php" method="POST">
                     <div id="formulaire">
                         <div id="formulairegauche">
                             <label>Nom d'utilisateur</label>
