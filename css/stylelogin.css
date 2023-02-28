@@ -1,0 +1,59 @@
+@font-face {
+    font-family: Helvetica;
+    src: url(../fonts/Helvetica-Font/Helvetica.ttf);
+}
+
+@font-face {
+    font-family: Futura;
+    src: url(../fonts/futura/futura\ medium\ bt.ttf);
+}
+body {
+    margin: 0;
+}
+#page{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+#contenu{
+    width:80%;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+}
+#formulaire{
+    display: flex;
+    width: 500px;
+    height: 100px;
+    justify-content: center;
+}
+#formulairegauche{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    height: 75px;
+    justify-content: space-around;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#formulairedroite{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    height: 75px;
+    justify-content: space-around;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#formulairelogin{
+    display: flex;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#contenu h1{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    padding:10px;
+    background-color: #0062ff;
+    border-radius: 5px;
+    text-align: center;
+}
