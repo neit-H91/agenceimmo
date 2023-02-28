@@ -1,5 +1,5 @@
 <head>
-    <link rel="stylesheet" href="../css/styleheader.css">
+    <link rel="stylesheet" href="styleheader.css">
 </head>
 <html>
     <header>
@@ -8,7 +8,7 @@
             <div class="right">
                 <p><a href="../acheter/acheter-categories.html">Acheter</a></p>
                 <p><a class="btn-contact" href="../contact.html">Contact</a></p>
-                <button onclick="window.location.href = 'vuescontroleurs/formRechercheBien.php';">Chercher un Bien</button>
+                <button class="btn-contact" onclick="window.location.href = 'vuescontroleurs/formRechercheBien.php';">Chercher un Bien</button>
             </div>
         </nav>
     </header>
