@@ -1,4 +1,3 @@
-<?php
 <html>
 <head>
 	<title>Formulaire de recherche</title>
