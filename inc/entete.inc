@@ -1,11 +1,15 @@
+<head>
+    <link rel="stylesheet" href="../css/styleheader.css">
+</head>
+<html>
     <header>
-        <nav> 
-            <h1><a href="../index.php">Immobilier</a></h1>
+        <nav>
+            <h1><a href="../index.html">Immobilier</a></h1>
             <div class="right">
-                <p><a href="acheter/acheter-categories.html">Acheter</a></p>
-                <p><a href="#">Vendre</a></p>
-                <p><a href="#">Louer</a></p>
+                <p><a href="../acheter/acheter-categories.html">Acheter</a></p>
+                <p><a class="btn-contact" href="../contact.html">Contact</a></p>
                 <button onclick="window.location.href = 'vuescontroleurs/formRechercheBien.php';">Chercher un Bien</button>
             </div>
         </nav>
     </header>
+</html>
