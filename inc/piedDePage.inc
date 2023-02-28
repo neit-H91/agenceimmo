@@ -1,18 +1,15 @@
+<head>
+    <link rel="stylesheet" href="stylefooter.css">
+</head>
+<html>
     <footer>
         <div class="column">
-            <h3>Achat</h3>
-            <p>Maison</p>
-            <p>Apartement</p>
-            <p>Locaux</p>
-            <p>Terrains</p>
-            <p>Immeubles</p>
-        </div>
-        <div class="column">
-            <h3>Vente</h3>
-            <p>Maison</p>
-            <p>Apartement</p>
-            <p>Locaux</p>
-            <p>Terrains</p>
-            <p>Immeubles</p>
+            <h3>Navigation</h3>
+            <p><a href="../../index.html">Acceuil</a></p>
+            <p><a class="btn-contact" href="../contact.html">Contact</a></p>
+            <p><a class="btn-connexion" href="">Se connecter</a></p>
         </div>
     </footer>
+</html>
+
+
