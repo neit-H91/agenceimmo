@@ -1,15 +1,15 @@
 <head>
-    <link rel="stylesheet" href="../css/styleheader.css">
+    <link rel="stylesheet" href="/agenceimmo/css/stylefooter.css">
 </head>
 <html>
-    <header>
-        <nav>
-            <h1><a href="../index.html">Immobilier</a></h1>
-            <div class="right">
-                <p><a href="../acheter/acheter-categories.html">Acheter</a></p>
-                <p><a class="btn-contact" href="../contact.html">Contact</a></p>
-                <button class="btn-contact" onclick="window.location.href = 'vuescontroleurs/formRechercheBien.php';">Chercher un Bien</button>
-            </div>
-        </nav>
-    </header>
+    <footer>
+        <div class="column">
+            <h3>Navigation</h3>
+            <p><a href="/agenceimmo/index.php">Acceuil</a></p>
+            <p><a class="btn-contact" href="#">Contact</a></p>
+            <p><a class="btn-connexion" href="/agenceimmo/vuescontroleurs/login.php">Se connecter</a></p>
+        </div>
+    </footer>   
 </html>
+
+
