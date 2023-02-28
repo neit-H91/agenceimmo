@@ -6,7 +6,7 @@
     <body>
         <header>
             <?php
-            include('header.php');
+            include('../inc/entete.inc');
             ?>
         </header>
         <div id="page">
@@ -34,7 +34,7 @@
     </div>
     <footer>
         <?php
-        include('footer.php');
+            include('../inc/piedDePage.inc');
         ?> 
     </footer>
 </body>
