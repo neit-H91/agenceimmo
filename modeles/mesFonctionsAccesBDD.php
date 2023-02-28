@@ -54,6 +54,15 @@ function ChercheBien($pdo,$type,$ville)
 }
 
 
+function recuperation($pdo,$username)
+{
+    $requete=$pdo->prepare("SELECT passwd FROM `utilisateur` WHERE nom =:user; ");
+    $bvc1=$requete->bindValue(':user',$username,PDO::PARAM_STR);
+    $executionOk=$requete->execute();
+    $mdphash=$requete->fetch();
+    return$mdphash['mdp'];
+}
+
 
 
 
