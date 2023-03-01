@@ -1,11 +1,11 @@
 <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="agenceimmo/css/stylemenuagent.css" media="screen" type="text/css" />
+    <link rel="stylesheet" href="/agenceimmo/css/stylemenuagent.css" media="screen" type="text/css" />
 </head>
 <body>
     
     <?php
-        include('inc/entete.inc');
+        include('../inc/entete.inc');
     ?>
     
     <div id="page">
@@ -19,7 +19,7 @@
     </div>
         
     <?php
-        include('footer.php');
+        include('../inc/piedDePage.inc');
     ?> 
         
 </body>
