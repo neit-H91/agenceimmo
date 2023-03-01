@@ -4,11 +4,10 @@
         <link rel="stylesheet" href="../css/stylelogin.css" media="screen" type="text/css" />
     </head>
     <body>
-        <header>
             <?php
             include('../inc/entete.inc');
             ?>
-        </header>
+        
         <div id="page">
             <div id="contenu">
                 <h1>Connexion</h1>
@@ -30,10 +29,10 @@
         </div>
     </form> 
 </div>
-<footer>
+
     <?php
     include('../inc/piedDePage.inc');
     ?> 
-</footer>
+
 </body>
 </html>
