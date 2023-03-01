@@ -3,11 +3,11 @@
         <link rel="stylesheet" href="../css/stylelogin.css" media="screen" type="text/css" />
     </head>
     <body>
-        <header>
+
             <?php
             include('../inc/entete.inc');
             ?>
-        </header>
+
         <div id="page">
             <div id="contenu">
                 <h1>Vous avez saisis de mauvaises information de connexion.<br>Veuillez réessayer.</h1>
@@ -31,10 +31,10 @@
             </div>
         </form> 
     </div>
-    <footer>
+
         <?php
             include('../inc/piedDePage.inc');
         ?> 
-    </footer>
+
 </body>
 </html>
