@@ -7,12 +7,19 @@
         <link rel="stylesheet" href="css/style-accueil.css">
     </head>
     <body>
-        <header>
-        <?php
-            include('inc/entete.inc');
-        ?>
-        </header>
-    
+
+    <header>
+        <nav>
+            <h1><a href="/agenceimmo/index.php">Immobilier</a></h1>
+            <div class="right">
+                <p><a href="#">Acheter</a></p>
+                <p><a class="btn-contact" href="#">Contact</a></p>
+                <button class="btn-contact" onclick="window.location.href = '/agenceimmo/vuescontroleurs/formRechercheBien.php';">Chercher un Bien</button>
+            </div>
+        </nav>
+    </header>
+
+        
     <section class="welcome">
         <div class="welcome-content">
             <p>Bienvenue sur le site !
