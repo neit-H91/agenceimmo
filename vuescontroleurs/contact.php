@@ -7,18 +7,11 @@
     <link rel="stylesheet" href="../css/style-contact.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <h1><a href="../index.html">Immobilier</a></h1>
-            <div class="right">
-                <p><a href="acheter/acheter-categories.php">Acheter</a></p>
-                <p><a href="#">Vendre</a></p>
-                <p><a href="#">Louer</a></p>
-                <button onclick="window.location.href = 'pages/contact.php';">Contact</button>
-            </div>
-        </nav>
-    </header>
-
+    
+    <?php
+        include('../inc/entete.inc');
+    ?>
+    
         <section class="contact-section">
             <h1>Contactez nous !</h1>
 
@@ -30,23 +23,10 @@
                 <input type="submit" class="contact-form-btn" value="Envoyer">
             </form>
         </section>
-    <footer>
-        <div class="column">
-            <h3>Achat</h3>
-            <p>Maison</p>
-            <p>Apartement</p>
-            <p>Locaux</p>
-            <p>Terrains</p>
-            <p>Immeubles</p>
-        </div>
-        <div class="column">
-            <h3>Vente</h3>
-            <p>Maison</p>
-            <p>Apartement</p>
-            <p>Locaux</p>
-            <p>Terrains</p>
-            <p>Immeubles</p>
-        </div>
-    </footer>
+    
+    <?php
+        include('../inc/piedDePage.inc');
+    ?> 
+    
 </body>
 </html>
