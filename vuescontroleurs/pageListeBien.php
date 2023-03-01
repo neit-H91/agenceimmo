@@ -1,11 +1,11 @@
 <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="../css/style-listerBiens.css" media="screen" type="text/css" />
+    <link rel="stylesheet" href="/agenceimmo/css/style-listerBiens.css" media="screen" type="text/css" />
 </head>
 <body>
 
         <?php
-          include('header.php');
+          include('../inc/entete.inc');
         ?>
 
   
@@ -13,7 +13,7 @@
   
 
         <?php
-          include('footer.php');
+          include('../inc/piedDePage.inc');
         ?> 
 
 </body>
