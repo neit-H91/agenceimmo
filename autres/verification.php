@@ -4,8 +4,8 @@ include_once '../modeles/mesFonctionsAccesBDD.php';
 //connexion à la bdd
 $pdo = connexionBDD();
 //recuperation des info rentré
-$login=$_POST['mail'];
-$mdp=$_POST['passwd'];
+$login=$_POST['username'];
+$mdp=$_POST['password'];
 //verification de la correspondance des hash de mdp
 $hash=recuperation($pdo,$login);
 if (md5($mdp) === $hash) {
