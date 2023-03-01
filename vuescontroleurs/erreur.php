@@ -11,7 +11,7 @@
         <div id="page">
             <div id="contenu">
                 <h1>Vous avez saisis de mauvaises information de connexion.<br>Veuillez réessayer.</h1>
-                <form action="../autre/verification.php" method="POST">
+                <form action="../autres/verification.php" method="POST">
                     <div id="formulaire">
                         <div id="formulairegauche">
                             <label>Nom d'utilisateur</label>
