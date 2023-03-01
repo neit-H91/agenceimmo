@@ -1,15 +1,18 @@
 <html>
+    
     <head>
-        <meta charset="utf-8">
-        <link rel="stylesheet" href="../css/style-accueil.css" media="screen" type="text/css" />
-
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Acheter</title>
+        <link rel="stylesheet" href="../css/style-accueil.css">
     </head>
+    
     <body>
-        <header>
+        
             <?php
             include('../inc/entete.inc');
             ?>
-        </header>
         
         <div id="Aligne-choix">
             <link rel="stylesheet" href="../css/style-rechercheBien.css" media="screen" type="text/css" />
@@ -31,11 +34,10 @@
 
 
         </div>
-        <footer>
-            <link rel="stylesheet" href="../css/style-accueil.css" media="screen" type="text/css" />
+
             <?php
             include('../inc/piedDePage.php');
             ?> 
-        </footer>
+
     </body>
 </html>
