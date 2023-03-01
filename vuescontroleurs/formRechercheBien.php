@@ -11,7 +11,7 @@
 <body>
 
 	<?php
-		include('agenceimmo/in/entete.inc');
+		include('../inc/entete.inc');
 	?>
 	
 	
@@ -28,7 +28,7 @@
 	</form>
 	
     <?php
-        include('footer.php');
+        include('../inc/piedDePage.inc');
     ?> 
 
 </body>
