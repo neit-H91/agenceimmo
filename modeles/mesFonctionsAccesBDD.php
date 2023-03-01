@@ -7,7 +7,7 @@
 
 function connexionBDD()
 {
-    $bdd ='mysql:host=localhost;dbname=test';
+    $bdd ='mysql:host=localhost;dbname=baseprojetimmo';
     $user ='root';
     $password ='';
     try {   
@@ -64,20 +64,3 @@ function recuperation($pdo,$username)
 }
 
 
-
-
-
-/*function getUnBien($pdo, $unId){
-    $sql = "SELECT prix FROM `biens` WHERE id= :id";
-    $objet=$pdo->prepare($sql);
-    $objet->bindValue(':id',$unId,PDO::PARAM_INT);
-    $objet->execute(array(':id' => $unId));
-    $leBien = $objet->fetch();
-    if (!is_array($leBien)){
-        $leBien=-1;
-    }    
-    $objet-> closeCursor();
-    return $leBien;
-    
-}    
-*/
