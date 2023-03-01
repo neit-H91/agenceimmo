@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : mar. 28 fév. 2023 à 12:56
+-- Généré le : mer. 01 mars 2023 à 23:15
 -- Version du serveur : 10.4.27-MariaDB
 -- Version de PHP : 8.2.0
 
@@ -31,8 +31,17 @@ CREATE TABLE `agents` (
   `mail` varchar(100) NOT NULL,
   `nom` varchar(50) NOT NULL,
   `prenom` varchar(50) NOT NULL,
-  `passwd` varchar(20) NOT NULL
+  `passwd` varchar(45) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+
+--
+-- Déchargement des données de la table `agents`
+--
+
+INSERT INTO `agents` (`mail`, `nom`, `prenom`, `passwd`) VALUES
+('DidierAgentImmo@gmail.com', 'Didier', 'Alphonse', '63a9f0ea7bb98050796b649e85481845'),
+('mathyslaouadi59960@gmail.com', 'Laouadi', 'Mathys', '5d2636b16ee5b9a6662768efa5a26c16'),
+('vincent.dubois.2004@gmail.com', 'Dubois', 'Vincent', '79ebab86c0f6eafb4de43e6123bff331');
 
 -- --------------------------------------------------------
 
