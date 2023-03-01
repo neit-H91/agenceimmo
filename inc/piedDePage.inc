@@ -1,5 +1,5 @@
 <head>
-    <link rel="stylesheet" href="css/stylefooter.css">
+    <link rel="stylesheet" href="/agenceimmo/css/stylefooter.css">
 </head>
 <html>
     <footer>
