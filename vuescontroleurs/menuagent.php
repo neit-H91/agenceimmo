@@ -1,13 +1,13 @@
 <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="../css/stylemenuagent.css" media="screen" type="text/css" />
+    <link rel="stylesheet" href="agenceimmo/css/stylemenuagent.css" media="screen" type="text/css" />
 </head>
 <body>
-    <header>
-        <?php
+    
+    <?php
         include('inc/entete.inc');
-        ?>
-    </header>
+    ?>
+    
     <div id="page">
         <div id="contenu">
             <h1>Bienvenu sur votre espace :</h1>
@@ -17,10 +17,10 @@
             </section>
         </div>
     </div>
-    <footer>
-        <?php
+        
+    <?php
         include('footer.php');
-        ?> 
-    </footer>
+    ?> 
+        
 </body>
 </html>
