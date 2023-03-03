@@ -16,7 +16,6 @@
         
         <div id="Aligne-choix">
             <link rel="stylesheet" href="../css/style-rechercheBien.css" media="screen" type="text/css" />
-            <!-- zone de connexion -->
             <form action="../modeles/mesFonctionsAccesBDD.php" method="POST">
 
                 <h1> Recherche de Biens</h1>
