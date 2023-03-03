@@ -21,22 +21,12 @@
 
                 <h1> Recherche de Biens</h1>
 
-                <form>
-                    <label for="Ville"> Ville :</label>
-                    <input type="textUN" id="valeur1" name="valeur1"><br>
-
-                    <label for="Type"> Type :</label>
-                    <input type="textDEUX" id="valeur2" name="valeur2"><br>
-                    <div id="Boite-bouton">
-                        <input type="submit" value="Trouver mon bien">
-                    </div>
-                </form>
-
+                
 
         </div>
 
             <?php
-            include('../inc/piedDePage.php');
+            include('../inc/piedDePage.inc');
             ?> 
 
     </body>
