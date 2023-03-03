@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Acheter</title>
-        <link rel="stylesheet" href="../css/style-accueil.css">
+        <link rel="stylesheet" href="../css/style-rechercheBien.css" media="screen" type="text/css" />
     </head>
     
     <body>
@@ -15,7 +15,6 @@
             ?>
         
         <div id="Aligne-choix">
-            <link rel="stylesheet" href="../css/style-rechercheBien.css" media="screen" type="text/css" />
             <form action="../modeles/mesFonctionsAccesBDD.php" method="POST">
 
                 <h1> Recherche de Biens</h1>
