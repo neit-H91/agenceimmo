@@ -26,16 +26,6 @@ function deconnexionBDD($cnx)
     $cnx=null;
 }
 
-function newTypes($pdo, $id, $libelle,){
-    $sql = "INSERT INTO `types`(`idTypes`, `libelle`) \n"
-     . "VALUES (:id,:libelle);";
-    $test=$pdo->prepare($sql);
-    $test->bindValue(':id',$id,PDO::PARAM_INT);
-    $test->bindValue(':libelle',$libelle,PDO::PARAM_STR);
-    $test->execute();
-    
-}
-
 function listerBiens($pdo){
     $sql = " SELECT * FROM Biens INNER JOIN Types ON idType = idTypes ";
     $test=$pdo->prepare($sql);
