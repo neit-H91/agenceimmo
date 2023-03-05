@@ -37,7 +37,7 @@ function newTypes($pdo, $id, $libelle,){
 }
 
 function listerBiens($pdo){
-    $sql = "SELECT * FROM `biens`";
+    $sql = " SELECT * FROM Biens INNER JOIN Types ON idType = idTypes WHERE ville = '$ville' AND libelle = '$type'";
     $test=$pdo->prepare($sql);
     $test->execute();
     $biens = $test->fetchAll();
