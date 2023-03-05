@@ -11,26 +11,30 @@
 <body>
 
 	<?php
-		include('../inc/entete.inc');
+	include('../inc/entete.inc');
 	?>
-	
+
 	<div id=Aligne-choix>
 		<h1>Formulaire de recherche</h1>
-		<form method="post" action="../autres/rechercheBien.php">
-			<label for="parametre1">Paramètre 1 :</label>
+		<form method="post">
+		<label for="parametre1">Saisissez la ville voulue :</label>
 			<input type="text" id="parametre1" name="parametre1"><br><br>
 
-			<label for="parametre2">Paramètre 2 :</label>
+			<label for="parametre2">Saisissez le type de bien recherché :</label>
 			<input type="text" id="parametre2" name="parametre2"><br><br>
 			<div id=Boite-bouton>
 				<input type="submit" value="Rechercher">
 			</div>
 		</form>
 	</div>
-	
-    <?php
+
+    	<?php
+        include('../autres/rechercheBien.php');
+    	?>
+
+    	<?php
         include('../inc/piedDePage.inc');
-    ?> 
+    	?> 
 
 </body>
 	
