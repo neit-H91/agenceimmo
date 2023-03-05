@@ -9,6 +9,6 @@
             <p><a class="btn-contact" href="../contact.html">Contact</a></p>
             <p><a class="btn-connexion" href="login.php">Se connecter</a></p>
         </div>
-    </footer>
+    </footer> 
 </html>
 
