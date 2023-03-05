@@ -8,17 +8,10 @@
     <link rel="stylesheet" href="../../css/style.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <h1><a href="../../index.html">Immobilier</a></h1>
-            <div class="right">
-                <p><a href="acheter-categories.php">Acheter</a></p>
-                <p><a href="#">Vendre</a></p>
-                <p><a href="#">Louer</a></p>
-                <p><a class="btn-contact" href="../contact.php">Contact</a></p>
-            </div>
-        </nav>
-    </header>
+    
+    <?php
+	include('../../inc/entete.inc');
+	?>
 
     <section class="liens-biens">
         <div class="biens">
@@ -186,23 +179,9 @@
         
     </section>
 
-    <footer>
-        <div class="column">
-            <h3>Achat</h3>
-            <p>Maison</p>
-            <p>Apartement</p>
-            <p>Locaux</p>
-            <p>Terrains</p>
-            <p>Immeubles</p>
-        </div>
-        <div class="column">
-            <h3>Vente</h3>
-            <p>Maison</p>
-            <p>Apartement</p>
-            <p>Locaux</p>
-            <p>Terrains</p>
-            <p>Immeubles</p>
-        </div>
-    </footer>
+    <?php
+	include('../../inc/piedDePage.inc');
+	?>
+
 </body>
 </html>
