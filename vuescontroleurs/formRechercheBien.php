@@ -32,13 +32,16 @@
                         <input type="submit" value="Rechercher">
                     </div>
                 </form>
+
+                <div id="recherche">
+                <?php
+                include('../autres/rechercheBien.php');
+    	        ?>
+                </div>
+
             </div>               
         </div>
 
-
-    	<?php
-        include('../autres/rechercheBien.php');
-    	?>
 
     	<?php
         include('../inc/piedDePage.inc');
