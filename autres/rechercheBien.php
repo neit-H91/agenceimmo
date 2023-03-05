@@ -8,7 +8,7 @@
         <link rel="stylesheet" href="../css/style-accueil.css">
     </head>
     
-    <body>
+    <body> 
 
                 <?php
                     include_once '../modeles/mesFonctionsAccesBDD.php';
