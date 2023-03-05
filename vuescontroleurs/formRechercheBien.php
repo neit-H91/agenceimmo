@@ -14,23 +14,27 @@
 	include('../inc/entete.inc');
 	?>
 
-	<div id=Aligne-choix>
-		
-		<h1>Formulaire de recherche</h1>
-		<form method="post">
-			<label for="parametre1">Saisissez la ville voulue :</label>
-				<input type="text" id="parametre1" name="parametre1"><br><br>
+	<div id="page">
+            <div id="contenu">
+                <h1>Formulaire de recherche</h1>
+                <form method="POST">
+                    <div id="formulaire">
+                        <div id="formulairegauche">
+                            <label for="parametre1">Saisissez ville :</label>
+                            <label for="parametre2">Saisissez le type de bien :</label>
+                        </div>
+                        <div id="formulairedroite">
+                            <input type="text" id="parametre1" name="parametre1">
+                            <input type="text" id="parametre2" name="parametre2">
+                        </div>
+                    </div>
+                    <div id="formulairelogin">
+                        <input type="submit" value="Rechercher">
+                    </div>
+                </form>
+            </div>               
+        </div>
 
-			<label for="parametre2">Saisissez le type de bien recherché :</label>
-				<input type="text" id="parametre2" name="parametre2"><br><br>
-			
-			<div id=Boite-bouton>
-				<input type="submit" value="Rechercher">
-			</div>
-			
-		</form>
-		
-	</div>
 
     	<?php
         include('../autres/rechercheBien.php');
