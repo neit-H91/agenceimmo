@@ -35,7 +35,9 @@
 
                 <div id="recherche">
                 <?php
-                include('../autres/rechercheBien.php');
+                if (isset($_POST["parametre1"])){
+                    include('../autres/rechercheBien.php');
+                }  
     	        ?>
                 </div>
 
