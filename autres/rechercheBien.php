@@ -7,8 +7,9 @@
         $T=$_POST['parametre2'];           
         $desBiens = ChercheBien($pdo, $T, $V);              
         foreach ($desBiens as $unBien){          
-            echo '<option value="'.'">'.'- '.$unBien['titre'].', un(e) '.$unBien['libelle'].' au prix de '.$unBien['prix'].'€ à '.$unBien['ville'].'</option>';             
+            echo '<option value="'.'">'.'- '.$unBien['titre'].', un(e) '.$unBien['libelle']
+            .' au prix de '.$unBien['prix'].'€ à '.$unBien['ville']
+            . ' d\'id: ' . $unBien['idBien'] .'.<a href="../vuescontroleurs/AfficherBien.php?id='.$unBien['idBien'].'"> Cliquez-ici pour le voir </a></option>';             
         }          
     ?>  
-
 </html>
