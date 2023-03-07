@@ -27,8 +27,6 @@
                     </div>
                 </form></div>               
         </div>
-    </form> 
-</div>
 
     <?php
     include('../inc/piedDePage.inc');
