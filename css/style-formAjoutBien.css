@@ -1,0 +1,140 @@
+@font-face {
+    font-family: Helvetica;
+    src: url(../fonts/Helvetica-Font/Helvetica.ttf);
+}
+
+@font-face {
+    font-family: Futura;
+    src: url(../fonts/futura/futura\ medium\ bt.ttf);
+}
+body {
+    margin: 0;
+}
+#page{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+#contenu{
+    width:80%;
+    display: flex;
+    flex-direction: column;
+    text-align:center;
+
+}
+#formulaire{
+    height:80%;
+    width:100%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 20% 20% 20% 20% 20%;
+}
+
+
+.bloc{
+    text-align:center;
+    display:flex;
+    flex-direction:row;
+}
+
+.blocfin{
+    text-align:center;
+    display:flex;
+    flex-direction:row;
+}
+
+.colonne1{
+    width:80%;
+    margin-bottom:10%;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+
+}
+
+.pictos{
+    width:20%;
+    margin-top:2%;
+    display:flex;
+    flex-direction:row;
+    justify-content:flex-start;
+}
+
+
+
+.picto-item {
+    position: relative;  /*les .picto-item deviennent référents*/
+    border-radius: 50%;
+  }
+  
+  /* on génère un élément :after lors du survol et du focus :*/
+  
+  .picto-item:hover:after,
+  .picto-item:focus:after {
+    content: attr(aria-label);  /* on affiche aria-label */
+    position: absolute;
+    top: -2.4em;
+    left: 50%;
+      transform: translateX(-50%); /* on centre horizontalement  */
+    z-index: 1; /* pour s'afficher au dessus des éléments en position relative */
+    white-space: nowrap;  /* on interdit le retour à la ligne*/
+    padding: 5px 14px;
+    background: #cccccc47;
+    color: #000000de;
+    border-radius: 4px;
+    font-size: 1rem;
+  }
+  
+  /* on génère un second élément en :before pour la flèche */
+  
+  [aria-label]:hover:before,
+  [aria-label]:focus:before {
+    position: absolute;
+    top: -1em;
+      left: 50%;
+      transform: translateX(-50%); /* on centre horizontalement  */
+    font-size: 20px;
+    color: #000000;
+  }
+  
+  /* pas de contour durant le :focus */
+  [aria-label]:focus {
+    outline: none;
+  }
+  
+  
+  
+  
+  
+  p, .pictos {
+    text-align: center;
+  }
+  
+  .picto-item {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 .2em;
+    width: 0.7em;
+    height: 0.7em;
+    color: #000000ad;
+    background: #cccccc75;
+    font-size: 3rem;
+    text-align: center;
+    text-decoration: none;
+  }
+
+
+
+
+
+
+/*
+#formulaire{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 20% 20% 20% 20% 20% 20%;
+}
+#formulaire div:nth-child(){
+    background-color: #B8336A;
+}
