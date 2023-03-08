@@ -22,95 +22,95 @@
                           
                             <div class="bloc">
                                 <div class="colonne1">
-                                    <label for="parametre1">-Saisissez la description du bien :</label>
+                                    <label for="parametre1">Saisissez la description du bien :</label>
                                     </br>  
                                     <input type="text" id="parametre1" name="description" required>
                                 </div>    
                                 <div class="pictos">
-                                    <a class="picto-item" id="pdt" href="#" aria-label="-Saisissez la description du bien">?</a>
+                                    <a class="picto-item" id="pdt" href="#" aria-label="Saisissez la description du bien">?</a>
                                 </div>
                             </div>
 
                             <div class="bloc">
                                 <div class="colonne1">
-                                    <label for="parametre2">-Saisissez le prix de bien :</label>      
+                                    <label for="parametre2">Saisissez le prix de bien :</label>      
                                     </br>                    
                                     <input type="text" id="parametre2" name="prix" required>
                                 </div>        
                                 <div class="pictos">
-                                    <a class="picto-item" id="pdt" href="#" aria-label="-Saisissez un nombre">?</a>
+                                    <a class="picto-item" id="pdt" href="#" aria-label="Saisissez un nombre">?</a>
                                 </div>
                             </div>
 
                             <div class="bloc">
                                 <div class="colonne1">
-                                    <label for="parametre3">-Saisissez l'adresse :</label>
+                                    <label for="parametre3">Saisissez l'adresse :</label>
                                     </br>
                                     <input type="text" id="parametre3" name="adresse" required>
                                 </div>    
                                 <div class="pictos">
-                                    <a class="picto-item" id="pdt" href="#" aria-label="-Saisissez l'adresse, numero et rue">?</a>
+                                    <a class="picto-item" id="pdt" href="#" aria-label="Saisissez l'adresse, numero et rue">?</a>
                                 </div>
                             </div>
 
                             <div class="bloc">
                                 <div class="colonne1">
-                                    <label for="parametre4">-Saisissez la ville du bien :</label>    
+                                    <label for="parametre4">Saisissez la ville du bien :</label>    
                                     </br>                        
                                     <input type="text" id="parametre4" name="ville" required>
                                 </div>
                                 <div class="pictos">
-                                    <a class="picto-item" id="pdt" href="#" aria-label="-Saisissez la ville du bien en toute lettre">?</a>
+                                    <a class="picto-item" id="pdt" href="#" aria-label="Saisissez la ville du bien en toute lettre">?</a>
                                 </div>
                             </div>
 
                             <div class="bloc">
                                 <div class="colonne1">
-                                    <label for="parametre5">-Saisissez le Code Postal de la ville du bien:</label>
+                                    <label for="parametre5">Saisissez le Code Postal de la ville du bien:</label>
                                     </br>
                                     <input type="text" id="parametre5" name="codepostal" required>
                                 </div>
                                 <div class="pictos">
-                                    <a class="picto-item" id="pdt" href="#" aria-label="-Saisissez un nombre">?</a>
+                                    <a class="picto-item" id="pdt" href="#" aria-label="Saisissez un nombre">?</a>
                                 </div>
                             </div>
                                
                             <div class="bloc">
                                 <div class="colonne1">
-                                    <label for="parametre6">-Saisissez la surface du bien :</label>
+                                    <label for="parametre6">Saisissez la surface du bien :</label>
                                     </br>
                                     <input type="text" id="parametre6" name="surfacebien" required>
                                 </div>
                                 <div class="pictos">
-                                    <a class="picto-item" id="pdt" href="#" aria-label="-Saisissez la surface du bien, ou du terrain sous forme de nombre en m2">?</a>
+                                    <a class="picto-item" id="pdt" href="#" aria-label="Saisissez la surface du bien, ou du terrain sous forme de nombre en m2">?</a>
                                 </div>
                             </div>
 
                             <div class="bloc">
                                 <div class="colonne1">
-                                    <label for="parametre7">-Saisissez la surface du jardin :</label>
+                                    <label for="parametre7">Saisissez la surface du jardin :</label>
                                     </br>  
                                     <input type="text" id="parametre7" name="surfacejardin">
                                 </div>
                                 <div class="pictos">
-                                    <a class="picto-item" id="pdt" href="#" aria-label="-Saisissez la surface du bien, ou du terrain sous forme de nombre en m2</br>Cette valeur peut être nulle, auquel cas ne -saisissez rien">?</a>
+                                    <a class="picto-item" id="pdt" href="#" aria-label="Saisissez la surface du bien, ou du terrain sous forme de nombre en m2</br>Cette valeur peut être nulle, auquel cas ne -saisissez rien">?</a>
                                 </div>
                             </div>
 
                             <div class="bloc">
                                 <div class="colonne1">
-                                    <label for="parametre8">-Saisissez le nombre de pièces du bien :</label> 
+                                    <label for="parametre8">Saisissez le nombre de pièces du bien :</label> 
                                     </br> 
                                     <input type="text" id="parametre8" name="nbpiece" >
                                 </div>
                                 <div class="pictos">
-                                    <a class="picto-item" id="pdt" href="#" aria-label="-Saisissez le nombre de pièces du bien</br>Cette valeur peut être nulle, auquel cas ne -saisissez rien">?</a>
+                                    <a class="picto-item" id="pdt" href="#" aria-label="Saisissez le nombre de pièces du bien</br>Cette valeur peut être nulle, auquel cas ne -saisissez rien">?</a>
                                 </div>                       
                             </div>
 
                             <div class="blocfin">
                                 <div class="colonne1">
-                                    <label for="parametre9">-Saisissez l'identifiant du type de bien :</label>
+                                    <label for="parametre9">Saisissez l'identifiant du type de bien :</label>
                                     </br>
                                     <input type="text" id="parametre9" name="idtype" required>
                                 </div>
@@ -121,7 +121,7 @@
 
                             <div class="blocfin">
                                 <div class="colonne1">
-                                    <label for="parametre10">-Saisissez le titre d'affichage du bien :</label>      
+                                    <label for="parametre10">Saisissez le titre d'affichage du bien :</label>      
                                     </br>                   
                                     <input type="text" id="parametre10" name="titre" required>
                                 </div>
