@@ -55,4 +55,21 @@ function recuperation($pdo,$username)
     return$mdphash['passwd'];
 }
 
+function ajouterBien($pdo, $description, $prix, $adresse, $ville, $codepostal, $surfacebien, $surfacejardin, $nbpiece, $idtype, $titre){
+    $sql = "INSERT INTO `biens`(`description`, `prix`, `adresse`, `ville`,`codeP`,`surfBien`,`surfJardin`, `nbPièce`,`idType`, `titre` ) \n"
+     . "VALUES (:description,:prix,:adresse,:ville,:codepostal,:surfacebien,:surfacejardin,:nbpiece,:idtype,:titre);";
+    $test=$pdo->prepare($sql);
+    $test->bindValue(':description',$description,PDO::PARAM_STR);
+    $test->bindValue(':prix',$prix,PDO::PARAM_INT);
+    $test->bindValue(':adresse',$adresse,PDO::PARAM_STR);
+    $test->bindValue(':ville',$ville,PDO::PARAM_STR);
+    $test->bindValue(':codepostal',$codepostal,PDO::PARAM_STR);
+    $test->bindValue(':surfacebien',$surfacebien,PDO::PARAM_INT);
+    $test->bindValue(':surfacejardin',$surfacejardin,PDO::PARAM_INT);
+    $test->bindValue(':nbpiece',$nbpiece,PDO::PARAM_INT);
+    $test->bindValue(':idtype',$idtype,PDO::PARAM_INT);
+    $test->bindValue(':titre',$titre,PDO::PARAM_STR);
+    $test->execute();
+}
+
 
