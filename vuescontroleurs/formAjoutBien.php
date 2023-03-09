@@ -133,7 +133,7 @@
 
 
                     <div id="formulairelogin">
-                        <input type="submit" value="Rechercher">
+                        <input type="submit" value="Ajouter le bien à la base de données">
                     </div>
                 </form>
 
