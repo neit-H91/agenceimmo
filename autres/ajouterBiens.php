@@ -14,7 +14,7 @@
         $NBP=$_POST['nbpiece'];
     }
 
-    ajouterBien($pdo, $_POST['description'], $test, $_POST['adresse'], $_POST['ville'], $_POST['codepostal'], $_POST['surfacebien'] , $SJ , $NBP , $_POST['idtype'], $_POST['titre']);
+    ajouterBien($pdo, $_POST['description'],  $_POST['prix'], $_POST['adresse'], $_POST['ville'], $_POST['codepostal'], $_POST['surfacebien'] , $SJ , $NBP , $_POST['idtype'], $_POST['titre']);
     echo "Vous avez bien ajouter le bien à la base de données";
 
 ?>     
