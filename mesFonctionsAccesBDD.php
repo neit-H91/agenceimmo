@@ -36,8 +36,10 @@ function listerBiens($pdo){
 
 function ChercheBien($pdo,$type,$ville)
 {
-    $sql = " SELECT titre,libelle,prix,ville FROM biens INNER JOIN types ON idType = idTypes WHERE ville = '$ville' AND libelle = '$type'";
+    $sql = " SELECT titre,libelle,prix,ville,idBien FROM biens INNER JOIN types ON idType = idTypes WHERE ville = :v AND libelle = :l";
     $test=$pdo->prepare($sql);
+    $test->bindValue(':v',$ville);
+    $test->bindValue(':l',$type);
     $test->execute();
     $lesBiens=$test->fetchAll();
     return $lesBiens;
@@ -68,7 +70,10 @@ function ajouterBien($pdo, $description, $prix, $adresse, $ville, $codepostal, $
     $test->bindValue(':idtype',$idtype,PDO::PARAM_INT);
     $test->bindValue(':titre',$titre,PDO::PARAM_STR);
     $test->execute();
-
 }
 
-
+function AfficheInformation($pdo,$id){
+    $sql = "SELECT (`description`, `prix`, `adresse`, `ville`,`codeP`,`surfBien`,`surfJardin`, `nbPièce`,`idType`, `titre`)  FROM `biens` WHERE idBien = $id";
+    $test=$pdo->prepare($sql);
+    $test->execute();
+}
