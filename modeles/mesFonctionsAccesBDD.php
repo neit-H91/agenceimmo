@@ -73,7 +73,10 @@ function ajouterBien($pdo, $description, $prix, $adresse, $ville, $codepostal, $
 }
 
 function AfficheInformation($pdo,$id){
-    $sql = "SELECT (`description`, `prix`, `adresse`, `ville`,`codeP`,`surfBien`,`surfJardin`, `nbPièce`,`idType`, `titre`)  FROM `biens` WHERE idBien = $id";
+    $sql = "SELECT titre,description, prix, adresse, ville,codeP,surfBien,surfJardin,nbPièce FROM `biens` WHERE idBien = :id ";
     $test=$pdo->prepare($sql);
+    $test->bindValue(':id',$id,PDO::PARAM_INT);
     $test->execute();
+    $retour = $test->fetch() ;
+    return $retour ;
 }
