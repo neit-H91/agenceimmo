@@ -27,7 +27,7 @@ function deconnexionBDD($cnx)
 }
 
 function listerBiens($pdo){
-    $sql = " SELECT titre,libelle,prix,ville FROM biens INNER JOIN types ON idType = idTypes ";
+    $sql = " SELECT titre,libelle,prix,ville,idBien FROM biens INNER JOIN types ON idType = idTypes ";
     $test=$pdo->prepare($sql);
     $test->execute();
     $biens = $test->fetchAll();
