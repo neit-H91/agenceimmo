@@ -72,4 +72,8 @@ function ajouterBien($pdo, $description, $prix, $adresse, $ville, $codepostal, $
     $test->execute();
 }
 
-
+function AfficheInformation($pdo,$id){
+    $sql = "SELECT (`description`, `prix`, `adresse`, `ville`,`codeP`,`surfBien`,`surfJardin`, `nbPièce`,`idType`, `titre`)  FROM `biens` WHERE idBien = $id";
+    $test=$pdo->prepare($sql);
+    $test->execute();
+}
