@@ -7,7 +7,6 @@
                 2- faire une phrase générique pour afficher les infos les biens -->
 
     <?php
-        echo $_GET['id'];
         include_once '../autres/RechercheInformation.php'; 
     ?>
     
