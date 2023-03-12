@@ -20,7 +20,7 @@
 		 <p>Bienvenue sur votre formulaire d'ajout de biens, ce formulaire vous permets d'ajouter un bien à une base de donées contenant tous les biens,
                  une fois ajouté une page se créera automatiquement pour le bien, afin d'être sûr des valeurs à entrer vous pouvez survolez ou cliquez sur les 
                  bulles informations "?" à droite des zones de saisie</p>
-                <form action="../autres/ajouterBiens.php" method="POST">
+                <form action="formAjoutBien2.php" method="POST">
                     <div id="formulaire">           
                             <div class="bloc">
                                 <div class="colonne1">
