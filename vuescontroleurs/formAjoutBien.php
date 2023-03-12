@@ -139,13 +139,6 @@
                     </div>
                 </form>
 
-                <div id="recherche">
-                <?php
-                if (isset($_POST["parametre1"]) && isset($_POST["parametre2"]) && isset($_POST["parametre3"]) && isset($_POST["parametre4"]) && isset($_POST["parametre5"]) && isset($_POST["parametre6"]) && isset($_POST["parametre9"]) && isset($_POST["parametre10"])){                    
-                    include('../inc/validationAjoutBien.inc');
-                }   
-    	        ?>
-                </div>
             </div>               
         </div>
 
