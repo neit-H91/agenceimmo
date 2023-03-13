@@ -34,15 +34,33 @@ function listerBiens($pdo){
     return $biens;
 }
 
-function ChercheBien($pdo,$type,$ville)
-{
-    $sql = " SELECT titre,libelle,prix,ville,idBien FROM biens INNER JOIN types ON idType = idTypes WHERE ville = :v AND libelle = :l";
-    $test=$pdo->prepare($sql);
-    $test->bindValue(':v',$ville);
-    $test->bindValue(':l',$type);
-    $test->execute();
-    $lesBiens=$test->fetchAll();
-    return $lesBiens;
+function ChercheBien($pdo, $type, $ville,$prix,$jardin) {
+    $sql = " SELECT titre,libelle,prix,ville,idBien FROM biens INNER JOIN types ON idType = idTypes where 1=1";
+    if($type!=''){
+        $sql.=" and libelle = :l";
+    }
+    if($ville!=''){
+        $sql.=" and ville = :v";
+    }
+    if($prix!=''){
+        $sql.=" and prix <= :p";
+    }
+    if($jardin!=''){
+        $sql.=" and surfJardin is not null";
+    }
+    $cmmd=$pdo->prepare($sql);
+    if($type!=''){
+        $cmmd->bindValue(':l', $type);
+    }
+    if($ville!=''){
+        $cmmd->bindValue(':v', $ville);
+    }
+    if($prix!=''){
+        $cmmd->bindValue(':p',$prix);
+    }
+    $cmmd->execute();
+    $biens=$cmmd->fetchAll();
+    return($biens);
 }
 
 
