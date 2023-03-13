@@ -1,4 +1,7 @@
-    <head>
+<?php
+    session_start();
+?>    
+<head>
         <meta charset="utf-8">
         <link rel="stylesheet" href="../css/stylelogin.css" media="screen" type="text/css" />
     </head>
