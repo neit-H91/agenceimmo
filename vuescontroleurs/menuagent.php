@@ -1,3 +1,12 @@
+<?php
+session_start();
+// On teste si la variable de session existe et contient une valeur
+if(empty($_SESSION['login'])) 
+{
+  // Si inexistante ou nulle, on redirige vers le formulaire de login
+  header('Location: login.php');
+  exit();
+}
 <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="../css/stylemenuagent.css" media="screen" type="text/css" />
