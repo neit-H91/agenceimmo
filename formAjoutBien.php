@@ -125,11 +125,11 @@ if(empty($_SESSION['login']))
                                     <label for="parametre9">Choisissez le type de bien :</label>
                                     </br>
                                     <select name="formAjoutTypeBien" id="formAjoutTypeBien">
-                                        <option value="maison">Maison</option>
-                                        <option value="appartement">Appartement</option>
-                                        <option value="terrain">Terrain</option>
-                                        <option value="local">Local</option>
-                                        <option value="immeuble">Immeuble</option>   
+                                        <option value="1">Maison</option>
+                                        <option value="2">Appartement</option>
+                                        <option value="3">Terrain</option>
+                                        <option value="4">Local</option>
+                                        <option value="5">Immeuble</option>   
                                     </select>                                
                                 </div>
                                 <div class="pictos">
