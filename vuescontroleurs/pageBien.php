@@ -1,6 +1,6 @@
 <?php
     include('../inc/entete.inc');
-    session_start()
+    session_start();
 ?>
 
 
