@@ -1,3 +1,6 @@
+<?php
+    session_start();
+?>
 <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="../css/style-listerBiens.css" media="screen" type="text/css" />
