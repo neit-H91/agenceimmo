@@ -1,3 +1,5 @@
+<html>
+
 <?php
 session_start();
 // On teste si la variable de session existe et contient une valeur
@@ -7,6 +9,8 @@ if(empty($_SESSION['login']))
   header('Location: login.php');
   exit();
 }
+?>
+  
 <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="../css/stylemenuagent.css" media="screen" type="text/css" />
