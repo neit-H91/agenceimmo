@@ -1,18 +1,20 @@
 <?php
     session_start();
 ?>
-<html>
+
 <?php
-            include('../inc/entete.inc');
-            ?>
-    <?php
-        include_once '../autres/RechercheInformation.php'; 
-    ?>
+    include('../inc/entete.inc');
+?>
+
+<?php
+    include_once '../autres/RechercheInformation.php'; 
+?>
+<html>
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Page bien</title>
+    <title> Page bien </title>
     <link rel="stylesheet" href="../css/style-biens.css">
 </head>
 
@@ -40,16 +42,37 @@
             </div>
             <div class="photos">
                 <div class="image-principale">
-                    <img src="../../img/terrains/terrain1/img1.jpg" alt="">
+
+                <?php
+		            $image1 = '../img/img-biens/'.$desInformations['idBien'].'-1.jpg';
+		            echo "<img src='$image1' alt='Emplacement pour une image'>";
+	            ?>
                 </div>
                 <div class="image-secondaires">
-                    <div class="row1"><img src="../../img/terrains/terrain1/img2.jpg" alt="">
-                    <img src="../../img/terrains/terrain1/img3.jpg" alt="">
-                    <img src="../../img/terrains/terrain1/img4.jpg" alt=""></div>
+                    <div class="row1">
+
+                    <?php
+		                $image2 = '../img/img-biens/'.$desInformations['id'].'-2.jpg';
+                        $image3 = '../img/img-biens/'.$desInformations['id'].'-3.jpg';
+                        $image4 = '../img/img-biens/'.$desInformations['id'].'-4.jpg';
+		                echo "<img src='$image2' alt='Emplacement pour une image'>";
+                        echo "<img src='$image3' alt='Emplacement pour une image'>";
+                        echo "<img src='$image4' alt='Emplacement pour une image'>";
+
+	                 ?>
+                    </div>
+                    
                     <div class="row2">
-                        <img src="../../img/terrains/terrain1/img5.jpg" alt="">
-                    <img src="../../img/terrains/terrain1/img6.jpg" alt="">
-                    <img src="../../img/terrains/terrain1/img7.jpg" alt="">
+
+                    <?php
+		                $image5 = '../img/img-biens/'.$desInformations['id'].'-5.jpg';
+                        $image6 = '../img/img-biens/'.$desInformations['id'].'-6.jpg';
+                        $image7 = '../img/img-biens/'.$desInformations['id'].'-7.jpg';
+		                echo "<img src='$image5' alt='Emplacement pour une image'>";
+                        echo "<img src='$image6' alt='Emplacement pour une image'>";
+                        echo "<img src='$image7' alt='Emplacement pour une image'>";
+	                 ?>
+
                     </div>
                     
                 </div>
@@ -110,3 +133,4 @@
             include('../inc/piedDePage.inc');
             ?>
 </html>
+
