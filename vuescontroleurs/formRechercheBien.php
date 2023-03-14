@@ -79,7 +79,7 @@ session_start();
                 </div>
                 <div id="recherche">
                 <?php
-                if (isset($_POST["ville"]) || isset($_POST["type"])){                    
+                if (isset($_POST["ville"]) || isset($_POST["type"]) || isset($_POST["jardin"] || isset($_POST["prix"])){                    
                     include('../autres/rechercheBien.php');
                 }   
     	        ?>
