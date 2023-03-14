@@ -44,7 +44,7 @@ session_start();
                                 </select>
                             </div>
                             <div id="champ2" class="entree">
-                                <label for="type">type de bien</label>
+e                                <label for="type">type de bien</label>
                                 <select name="type" id="type">
                                     <option value=""> </option>
                                     <?php
@@ -79,7 +79,7 @@ session_start();
                 </div>
                 <div id="recherche">
                 <?php
-                if (isset($_POST["ville"]) || isset($_POST["type"]) || isset($_POST["jardin"] || isset($_POST["prix"])){                    
+                if (isset($_POST["ville"]) || isset($_POST["type"]) || isset($_POST["jardin"]) || isset($_POST["prix"])){                    
                     include('../autres/rechercheBien.php');
                 }   
     	        ?>
