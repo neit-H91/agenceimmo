@@ -28,6 +28,7 @@ if(empty($_SESSION['login']))
                 <button onclick="window.location.href = 'formAjoutBien.php';">Ajouter un bien</button>
                 <button onclick="window.location.href = '#';">Modifier un bien</button>
                 <button onclick="window.location.href = '#';">Supprimer un bien</button>
+              <button onclick="window.location.href = '../autres/deconnexion.php';">Se déconnecter</button>
             </section>
         </div>
     </div>
