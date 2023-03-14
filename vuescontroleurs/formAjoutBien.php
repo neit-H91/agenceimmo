@@ -122,9 +122,15 @@ if(empty($_SESSION['login']))
 
                             <div class="blocfin">
                                 <div class="colonne1">
-                                    <label for="parametre9">Saisissez l'identifiant du type de bien :</label>
+                                    <label for="formAjoutTypeBien">Choisissez le type de bien :</label>
                                     </br>
-                                    <input type="text" id="parametre9" name="idtype" required>
+                                    <select name="formAjoutTypeBien" id="formAjoutTypeBien">
+                                        <option value="1">Maison</option>
+                                        <option value="2">Appartement</option>
+                                        <option value="3">Terrain</option>
+                                        <option value="4">Local</option>
+                                        <option value="5">Immeuble</option>   
+                                    </select>                                
                                 </div>
                                 <div class="pictos">
                                     <a class="picto-item" id="pdt" href="#" aria-label="-Saisissez 1 pour une maison \n -Saisissez 2 pour un appartement</br>-Saisissez 3 pour un terrain</br>-Saisissez 4 pour un local</br>-Saisissez 5 pour un immeuble</br>">?</a>
