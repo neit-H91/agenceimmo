@@ -48,3 +48,15 @@ form{
     flex-direction: column;
     align-items: center;
 }
+
+#bas .entree{
+    padding-top: 5%;
+}
+
+#haut .entree{
+    padding-top: 8%;
+}
+
+#haut{
+    padding-right:2%;
+}
