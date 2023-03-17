@@ -28,6 +28,8 @@ session_start();
                     <form method="post">
                         <div id="champs">
 
+                            <div id=haut>
+
                             <div id="champ1" class="entree">
                                 <label for="ville">Ville</label>
                                 <select name="ville" id="ville">
@@ -44,7 +46,7 @@ session_start();
                                 </select>
                             </div>
                             <div id="champ2" class="entree">
-e                                <label for="type">type de bien</label>
+e                               <label for="type">Choisissez le type de bien</label>
                                 <select name="type" id="type">
                                     <option value=""> </option>
                                     <?php
@@ -63,6 +65,10 @@ e                                <label for="type">type de bien</label>
                                 <input type="text" id="parametre1" name="prix">
                             </div>
 
+                            </div>
+
+                            <div id=bas>
+
                             <div id="champ4" class="entree">
                                 <label for="jardin">Présence d'un jardin : </label>
                                 <select name="jardin" id ="jardin">
@@ -70,6 +76,19 @@ e                                <label for="type">type de bien</label>
                                     <option value="oui">Oui</option>
                                 </select>
                             </div>
+
+                            <div id="champ5" class="entree">
+                                <label for="parametre2">Saisissez la surface minimum du bien en m² :</label>
+                                <input type="text" id="parametre2" name="surfaceMini">
+                            </div>
+
+                            <div id="champ6" class="entree">
+                                <label for="parametre3">Saisissez le nombre de pièces minimum :</label>
+                                <input type="text" id="parametre3" name="piecesMini">
+                            </div>
+
+                            </div>
+
                         </div>
                         <div id="formulairelogin">
                             <input type="submit" value="Rechercher">
