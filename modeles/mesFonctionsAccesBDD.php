@@ -162,4 +162,4 @@ function editerBien($pdo,$idEdit,$description, $prix, $adresse, $ville, $codepos
         $sql.=',titre = $titre';
     }
     $sql.' =INNER JOIN types ON idType = idTypes WHERE idBien = $idEdit' ;
-
+}
