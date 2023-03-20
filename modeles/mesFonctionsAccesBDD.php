@@ -72,8 +72,16 @@ function ChercheBien($pdo, $type, $ville,$prix,$jardin,$surfaceMini,$piecesMini)
         $cmmd->bindValue(':pm',$piecesMini);
     }
     $cmmd->execute();
-    $biens=$cmmd->fetchAll();
-    return($biens);
+    $nbr=$cmmd->rowCount();
+    if($nbr==0){
+        echo 'Aucun bien ne correspond a ces critères';
+        $biens=$cmmd->fetchAll();
+        return($biens);
+    }
+    else{
+        $biens=$cmmd->fetchAll();
+        return($biens);
+    } 
 }
 
 
