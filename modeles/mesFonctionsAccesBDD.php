@@ -126,5 +126,6 @@ function recupNom($pdo,$mail){
     $test->bindValue(':mail',$mail,PDO::PARAM_STR);
     $test->execute();
     $retour = $test->fetchAll() ;
+    return $retour ;
 }
 
