@@ -125,14 +125,6 @@ function recupNom($pdo,$mail){
     $test=$pdo->prepare($sql);
     $test->bindValue(':mail',$mail,PDO::PARAM_STR);
     $test->execute();
-    $retour = $test->fetchAll() ;
-    return $retour ;
-}
-function AfficheInformation($pdo,$id){
-    $sql = "SELECT titre,descript, prix, adresse, ville,codeP,surfBien,surfJardin,nbPièce FROM `biens` WHERE idBien = :id ";
-    $test=$pdo->prepare($sql);
-    $test->bindValue(':id',$id,PDO::PARAM_INT);
-    $test->execute();
     $retour = $test->fetch() ;
     return $retour ;
 }
