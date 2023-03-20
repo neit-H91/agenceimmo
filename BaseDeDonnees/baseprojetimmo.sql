@@ -82,8 +82,7 @@ INSERT INTO `biens` (`idBien`, `descript`, `prix`, `adresse`, `ville`, `codeP`, 
 (12, 'Maison de tourcoing', 210000, '98 rue de la vue d\'or', 'tourcoing', '59390', 110, 100, 3, 1, 'Maison de tourcoing petite mais elle est là.'),
 (13, '13 ième maison, c\'est beaucoup la non?', 290000, '100 avenue des rochers', 'Paris', '75000', 390, 250, 17, 1, 'Maison de paris, pas une arnaque vous en faites pas'),
 (14, 'Bon qqch là?', 78200, '78 avenue de la mort', 'Lys-Lez-Lannoy', '59390', 150, NULL, 2, 1, 'Maison de Lys-Lez-Lannoy, mi-grande mi-jolie, 100% faite pour vous'),
-(15, 'Appartement de lille', 980000, '1 rue de la poste', 'Lille', '59300', 150, NULL, 6, 2, 'Appartement de Lille'),
-(81, 'Une desc', 900000, '78 rue blue', 'Roubaix', '89541', 250, 780, 9, 1, 'Maison blue');
+(15, 'Appartement de lille', 980000, '1 rue de la poste', 'Lille', '59300', 150, NULL, 6, 2, 'Appartement de Lille');
 
 -- --------------------------------------------------------
 
@@ -138,7 +137,7 @@ ALTER TABLE `types`
 -- AUTO_INCREMENT pour la table `biens`
 --
 ALTER TABLE `biens`
-  MODIFY `idBien` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=82;
+  MODIFY `idBien` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
