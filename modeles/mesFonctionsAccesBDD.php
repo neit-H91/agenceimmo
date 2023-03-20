@@ -119,3 +119,12 @@ function AfficheInformation($pdo,$id){
     $retour = $test->fetch() ;
     return $retour ;
 }
+
+function recupNom($pdo,$mail){
+    $sql = "SELECT nom, prenom FROM `agents` WHERE mail = :mail ";
+    $test=$pdo->prepare($sql);
+    $test->bindValue(':mail',$mail,PDO::PARAM_STR);
+    $test->execute();
+    $retour = $test->fetchAll() ;
+}
+
