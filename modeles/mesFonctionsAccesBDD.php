@@ -128,4 +128,46 @@ function recupNom($pdo,$mail){
     $retour = $test->fetchAll() ;
     return $retour ;
 }
+function AfficheInformation($pdo,$id){
+    $sql = "SELECT titre,descript, prix, adresse, ville,codeP,surfBien,surfJardin,nbPièce FROM `biens` WHERE idBien = :id ";
+    $test=$pdo->prepare($sql);
+    $test->bindValue(':id',$id,PDO::PARAM_INT);
+    $test->execute();
+    $retour = $test->fetch() ;
+    return $retour ;
+}
+
+function editerBien($pdo,$idEdit,$description, $prix, $adresse, $ville, $codepostal, $surfacebien, $surfacejardin, $nbpiece, $idtype, $titre){
+    $sql = ' UPDATE biens SET prix = prix ';
+    if($idtype!=''){
+        $sql.=',idType = $idtype';
+    }
+    if($description!=''){
+        $sql.=',descript = $descript';
+    }
+    if($prix!=''){
+        $sql.=', prix = $prix';
+    }
+    if($adresse!=''){
+        $sql.=', adresse = $adresse';
+    }
+    if($ville!=''){
+        $sql.=',ville = $ville';
+    }
+    if($codepostal!=''){
+        $sql.=',codeP = $codepostal';
+    }
+    if($surfacebien!=''){
+        $sql.=',surfBien = $surfacebien';
+    }
+    if($surfacejardin!=''){
+        $sql.=',surfJardin = $surfacejardin';
+    }
+    if($idtype!=''){
+        $sql.=', idType = $idType';
+    }
+    if($titre!=''){
+        $sql.=',titre = $titre';
+    }
+    $sql.' =INNER JOIN types ON idType = idTypes WHERE idBien = $idEdit' ;
 
