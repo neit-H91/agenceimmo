@@ -46,7 +46,7 @@ session_start();
                                 </select>
                             </div>
                             <div id="champ2" class="entree">
-e                               <label for="type">Choisissez le type de bien</label>
+                                <label for="type">Choisissez le type de bien</label>
                                 <select name="type" id="type">
                                     <option value=""> </option>
                                     <?php
