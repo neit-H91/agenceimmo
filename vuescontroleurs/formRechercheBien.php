@@ -72,7 +72,7 @@ e                               <label for="type">Choisissez le type de bien</la
                             <div id="champ4" class="entree">
                                 <label for="jardin">Présence d'un jardin : </label>
                                 <select name="jardin" id ="jardin">
-                                    <option value="oui"> Peu Importe</option>
+                                    <option value="peuImporte"> Peu Importe</option>
                                     <option value="">Non</option>
                                     <option value="oui">Oui</option>
                                 </select>
