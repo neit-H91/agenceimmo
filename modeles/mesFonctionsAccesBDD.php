@@ -193,7 +193,7 @@ function editerBien($pdo,$idEdit,$description,$prix,$adresse,$ville,$codepostal,
         $cmmd->bindValue(':nbp', $nbpiece,PDO::PARAM_INT); 
     }
     if($idtype!=""){
-        $cmmd->bindValue(':idType', $idtype,PDO::PARAM_INT);
+        $cmmd->bindValue(':idtype', $idtype,PDO::PARAM_INT);
     }
     if($titre!=''){
         $cmmd->bindValue(':titre', $titre,PDO::PARAM_STR);
