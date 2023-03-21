@@ -107,6 +107,9 @@
                         echo '<h2> ' . $desInformations['descript'] . ' </h2>';
                     ?>
             </div>
+		<div id="pdf">
+                <button onclick="window.location.href = '../autres/testpdf.php?id=<?php echo $_GET['id']; ?>';">télécharger cette annonce en pdf</button>
+            </div>
             <!---
             <div class="bilan-energetique">
                 <h3>Bilan energetique</h3><br><br><br>
