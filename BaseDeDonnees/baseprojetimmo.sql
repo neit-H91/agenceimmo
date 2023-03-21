@@ -41,7 +41,7 @@ CREATE TABLE `agents` (
 INSERT INTO `agents` (`mail`, `nom`, `prenom`, `passwd`) VALUES
 ('DidierAgentImmo@gmail.com', 'Didier', 'Alphonse', '4813494d137e1631bba301d5acab6e7bb7aa74ce1185d456565ef51d737677b2'),
 ('mathyslaouadi59960@gmail.com', 'Laouadi', 'Mathys', 'd177f1d3dc9fa62ddbc59d92b05fb109449a284d9ae439a0ed28a6062114f654'),
-('vincent.dubois.2004@gmail.com', 'Dubois', 'Vincent', '4b49872bf70ed6edb51fe06f18c4d780a7a2c14c133663fb0366cdc70332c5bc');
+('vincent.dubois.2004@gmail.com', 'Dubois', 'Vincent', '5e884898da28047151d0e56f8dc6292773603d0d6aabbdd62a11ef721d1542d8');
 
 -- --------------------------------------------------------
 
