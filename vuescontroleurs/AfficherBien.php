@@ -108,7 +108,7 @@
                     ?>
             </div>
 		<div id="pdf">
-                <button onclick="window.location.href = '../autres/testpdf.php?id=<?php echo $_GET['id']; ?>';">télécharger cette annonce en pdf</button>
+                <button onclick="window.location.href = '../autres/bienPdf.php?id=<?php echo $_GET['id']; ?>';">télécharger cette annonce en pdf</button>
             </div>
             <!---
             <div class="bilan-energetique">
