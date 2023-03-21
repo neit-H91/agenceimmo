@@ -30,7 +30,7 @@ if(empty($_SESSION['login']))
 		 <p>Bienvenue sur votre formulaire d'édit des biens, ce formulaire vous permets d'éditer les informations d'un bien de la base de donées ,
                  une fois édité les informations seront  automatiquement mise à jour sur la page du bien, afin d'être sûr des valeurs à éditer vous pouvez survolez ou cliquez sur les 
                  bulles informations "?" à droite des zones de saisie, pour ne rien changer, laissez la zone de texte vide.</p>
-                <form action="../autres/editerBiens.php" method="POST">
+                <form action="../autres/editerBien.php" method="POST">
                     <div id="formulaire">
                         
                     <!-- A faire, vérifier si les valeurs son vide, les autoriser-->
@@ -49,7 +49,7 @@ if(empty($_SESSION['login']))
                                 <div class="colonne1">
                                     <label for="parametre1">Saisissez la nouvelle description  du bien :</label>
                                     </br>  
-                                    <input type="text" id="parametre1" name="description" required>
+                                    <input type="text" id="parametre1" name="description" >
                                 </div>    
                                 <div class="pictos">
                                     <a class="picto-item" id="pdt" href="#" aria-label="Saisissez la description du bien">?</a>
@@ -60,7 +60,7 @@ if(empty($_SESSION['login']))
                                 <div class="colonne1">
                                     <label for="parametre2">Saisissez le nouveau prix de bien :</label>      
                                     </br>                    
-                                    <input type="text" id="parametre2" name="prix" required>
+                                    <input type="text" id="parametre2" name="prix" >
                                 </div>        
                                 <div class="pictos">
                                     <a class="picto-item" id="pdt" href="#" aria-label="Saisissez un nombre">?</a>
@@ -71,7 +71,7 @@ if(empty($_SESSION['login']))
                                 <div class="colonne1">
                                     <label for="parametre3">Saisissez  la nouvelle adresse :</label>
                                     </br>
-                                    <input type="text" id="parametre3" name="adresse" required>
+                                    <input type="text" id="parametre3" name="adresse" >
                                 </div>    
                                 <div class="pictos">
                                     <a class="picto-item" id="pdt" href="#" aria-label="Saisissez l'adresse, numero et rue">?</a>
@@ -82,7 +82,7 @@ if(empty($_SESSION['login']))
                                 <div class="colonne1">
                                     <label for="parametre4">Saisissez la nouvelle ville du bien :</label>    
                                     </br>                        
-                                    <input type="text" id="parametre4" name="ville" required>
+                                    <input type="text" id="parametre4" name="ville" >
                                 </div>
                                 <div class="pictos">
                                     <a class="picto-item" id="pdt" href="#" aria-label="Saisissez la ville du bien en toute lettre">?</a>
@@ -93,7 +93,7 @@ if(empty($_SESSION['login']))
                                 <div class="colonne1">
                                     <label for="parametre5">Saisissez le nouveau Code Postal de la ville du bien:</label>
                                     </br>
-                                    <input type="text" id="parametre5" name="codepostal" required>
+                                    <input type="text" id="parametre5" name="codepostal" >
                                 </div>
                                 <div class="pictos">
                                     <a class="picto-item" id="pdt" href="#" aria-label="Saisissez un nombre">?</a>
@@ -104,7 +104,7 @@ if(empty($_SESSION['login']))
                                 <div class="colonne1">
                                     <label for="parametre6">Saisissez la nouvelle surface du bien :</label>
                                     </br>
-                                    <input type="text" id="parametre6" name="surfacebien" required>
+                                    <input type="text" id="parametre6" name="surfacebien" >
                                 </div>
                                 <div class="pictos">
                                     <a class="picto-item" id="pdt" href="#" aria-label="Saisissez la surface du bien, ou du terrain sous forme de nombre en m2">?</a>
@@ -137,7 +137,8 @@ if(empty($_SESSION['login']))
                                 <div class="colonne1">
                                     <label for="formAjoutTypeBien">Choisissez le nouveau type de bien :</label>
                                     </br>
-                                    <select name="formAjoutTypeBien" id="formAjoutTypeBien">
+                                    <select name="idType" id="idType">
+                                        <option value="">ne rien changer</option>
                                         <option value="1">Maison</option>
                                         <option value="2">Appartement</option>
                                         <option value="3">Terrain</option>
@@ -154,7 +155,7 @@ if(empty($_SESSION['login']))
                                 <div class="colonne1">
                                     <label for="parametre10">Saisissez le nouveau titre d'affichage du bien :</label>      
                                     </br>                   
-                                    <input type="text" id="parametre10" name="titre" required>
+                                    <input type="text" id="parametre10" name="titre" >
                                 </div>
                                 <div class="pictos">
                                     <a class="picto-item" id="pdt" href="#" aria-label="Saisissez le titre, c'est à dire la phrase qui décrira le bien">?</a>
@@ -179,3 +180,4 @@ if(empty($_SESSION['login']))
 </body>
 	
 </html>
+
