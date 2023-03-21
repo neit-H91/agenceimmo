@@ -48,6 +48,9 @@ function ChercheBien($pdo, $type, $ville,$prix,$jardin,$surfaceMini,$piecesMini)
     if($jardin==''){
         $sql.=" and surfJardin is null";
     }
+    if($jardin=='oui'){
+        $sql.=" and surfJardin is not null";
+    }
     if($surfaceMini!=''){
         $sql.=" and surfBien >= :sm";
     }
