@@ -132,37 +132,71 @@ function recupNom($pdo,$mail){
     return $retour ;
 }
 
-function editerBien($pdo,$idEdit,$description, $prix, $adresse, $ville, $codepostal, $surfacebien, $surfacejardin, $nbpiece, $idtype, $titre){
-    $sql = ' UPDATE biens SET prix = prix ';
-    if($idtype!=''){
-        $sql.=',idType = $idtype';
-    }
+function editerBien($pdo,$idEdit,$description,$prix,$adresse,$ville,$codepostal,$surfacebien,$surfacejardin,$nbpiece,$idtype,$titre){
+    $sql = "UPDATE biens SET idBien=idBien";
     if($description!=''){
-        $sql.=',descript = $descript';
+        $sql.=', descript = :d';
     }
     if($prix!=''){
-        $sql.=', prix = $prix';
+        $sql.=', prix = :p';
     }
     if($adresse!=''){
-        $sql.=', adresse = $adresse';
+        $sql.=', adresse = :a';
     }
     if($ville!=''){
-        $sql.=',ville = $ville';
+        $sql.=', ville = :v';
     }
     if($codepostal!=''){
-        $sql.=',codeP = $codepostal';
+        $sql.=', codeP = :c';
     }
     if($surfacebien!=''){
-        $sql.=',surfBien = $surfacebien';
+        $sql.=', surfBien = :sub';
     }
     if($surfacejardin!=''){
-        $sql.=',surfJardin = $surfacejardin';
+        $sql.=', surfJardin = :suj';
+    }
+    if($nbpiece!=''){
+        $sql.=', nbPièce = :nbp'; 
     }
     if($idtype!=''){
-        $sql.=', idType = $idType';
+        $sql.=', idType = :idtype';
     }
     if($titre!=''){
-        $sql.=',titre = $titre';
+        $sql.=', titre = :titre';
     }
-    $sql.' =INNER JOIN types ON idType = idTypes WHERE idBien = $idEdit' ;
+    $sql.='  WHERE idBien = :edit' ;
+    $cmmd=$pdo->prepare($sql);
+    //BindsValues
+    $cmmd->bindValue(':edit', $idEdit);
+    if($description!=''){
+        $cmmd->bindValue(':d', $description,PDO::PARAM_STR);
+    }
+    if($prix!=''){
+        $cmmd->bindValue(':p', $prix,PDO::PARAM_INT);
+    }
+    if($adresse!=''){
+        $cmmd->bindValue(':a', $adresse,PDO::PARAM_STR);
+    }
+    if($ville!=''){
+        $cmmd->bindValue(':v', $ville,PDO::PARAM_STR);
+    }
+    if($codepostal!=''){
+        $cmmd->bindValue(':c', $codepostal,PDO::PARAM_INT);
+    }
+    if($surfacebien!=''){
+        $cmmd->bindValue(':sub', $surfacebien,PDO::PARAM_INT);
+    }
+    if($surfacejardin!=''){
+        $cmmd->bindValue(':suj', $surfacejardin,PDO::PARAM_INT);
+    }
+    if($nbpiece!=''){
+        $cmmd->bindValue(':nbp', $nbpiece,PDO::PARAM_INT); 
+    }
+    if($idtype!=""){
+        $cmmd->bindValue(':idType', $idtype,PDO::PARAM_INT);
+    }
+    if($titre!=''){
+        $cmmd->bindValue(':titre', $titre,PDO::PARAM_STR);
+    }
+    $cmmd->execute();
 }
