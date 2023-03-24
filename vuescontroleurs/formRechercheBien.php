@@ -89,7 +89,7 @@ session_start();
                             </div>
 
                             <div id="champ7" class="entree">
-                                <label for="parametre3">Saisisez l'Id re référence :</label>
+                                <label for="parametre3">Saisisez l'Id de référence :</label>
                                 <input type="text" id="parametre4" name="idChoix">
                             </div>
 
