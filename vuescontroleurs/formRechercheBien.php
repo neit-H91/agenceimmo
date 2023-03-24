@@ -88,6 +88,11 @@ session_start();
                                 <input type="text" id="parametre3" name="piecesMini">
                             </div>
 
+                            <div id="champ7" class="entree">
+                                <label for="parametre3">Saisisez l'Id re référence :</label>
+                                <input type="text" id="parametre4" name="idChoix">
+                            </div>
+
                             </div>
 
                         </div>
