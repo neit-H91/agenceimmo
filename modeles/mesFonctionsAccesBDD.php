@@ -36,49 +36,53 @@ function listerBiens($pdo){
 
 function ChercheBien($pdo, $type, $ville,$prix,$jardin,$surfaceMini,$piecesMini,$idChoix) {
     $sql = " SELECT titre,libelle,prix,ville,idBien FROM biens INNER JOIN types ON idType = idTypes where 1=1";
-    if($type!=''){
-        $sql.=" and libelle = :l";
-    }
-    if($ville!=''){
-        $sql.=" and ville = :v";
-    }
-    if($prix!=''){
-        $sql.=" and prix <= :p";
-    }
-    if($jardin==''){
-        $sql.=" and surfJardin is null";
-    }
-    if($jardin=='oui'){
-        $sql.=" and surfJardin is not null";
-    }
-    if($surfaceMini!=''){
-        $sql.=" and surfBien >= :sm";
-    }
-    if($piecesMini!=''){
-        $sql.=" and nbPièce >= :pm";
-    }
     if($idChoix!=''){
         $sql.=" and idBien = :rId";
     }
+    else{
+        if($type!=''){
+            $sql.=" and libelle = :l";
+        }
+        if($ville!=''){
+            $sql.=" and ville = :v";
+        }
+        if($prix!=''){
+            $sql.=" and prix <= :p";
+        }
+        if($jardin==''){
+            $sql.=" and surfJardin is null";
+        }
+        if($jardin=='oui'){
+            $sql.=" and surfJardin is not null";
+        }
+        if($surfaceMini!=''){
+            $sql.=" and surfBien >= :sm";
+        }
+        if($piecesMini!=''){
+            $sql.=" and nbPièce >= :pm";
+        }
+    }
 
     $cmmd=$pdo->prepare($sql);
-    if($type!=''){
-        $cmmd->bindValue(':l', $type);
-    }
-    if($ville!=''){
-        $cmmd->bindValue(':v', $ville);
-    }
-    if($prix!=''){
-        $cmmd->bindValue(':p',$prix);
-    }
-    if($surfaceMini!=''){
-        $cmmd->bindValue(':sm', $surfaceMini);
-    }
-    if($piecesMini!=''){
-        $cmmd->bindValue(':pm',$piecesMini);
-    }
     if($idChoix!=''){
         $cmmd->bindValue(':rId',$idChoix);
+    }
+    else{
+        if($type!=''){
+            $cmmd->bindValue(':l', $type);
+        }
+        if($ville!=''){
+            $cmmd->bindValue(':v', $ville);
+        }
+        if($prix!=''){
+            $cmmd->bindValue(':p',$prix);
+        }
+        if($surfaceMini!=''){
+            $cmmd->bindValue(':sm', $surfaceMini);
+        }
+        if($piecesMini!=''){
+            $cmmd->bindValue(':pm',$piecesMini);
+        }
     }
     $cmmd->execute();
     $nbr=$cmmd->rowCount();
