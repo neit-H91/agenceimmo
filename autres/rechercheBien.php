@@ -7,7 +7,8 @@
         $J=$_POST['jardin'];
         $SM=$_POST['surfaceMini'];
         $PM=$_POST['piecesMini'];
-        $biens = ChercheBien($pdo, $T, $V,$P,$J,$SM,$PM);
+        $ID=$_POST['idChoix'];
+        $biens = ChercheBien($pdo, $T, $V,$P,$J,$SM,$PM,$ID);
         foreach ($biens as $unBien){          
             echo '<option value="'.'">'.'- '.$unBien['titre'].', un(e) '.$unBien['libelle']
             .' au prix de '.$unBien['prix'].'€ à '.$unBien['ville'].'</option>'
