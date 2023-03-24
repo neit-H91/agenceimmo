@@ -7,7 +7,14 @@
 ?>
 
 <?php
-    include_once '../autres/RechercheInformation.php'; 
+    include_once '../autres/RechercheInformation.php';
+    $testPage = $_GET['id'];
+    $bdd = connexionBDD();
+    $lesIds = get_all_id($bdd);
+    if(!in_array($testPage, $lesIds)){
+        header('Location: http://localhost/agenceimmo-Sprint4/vuescontroleurs/formRechercheBien.php');
+        exit;
+    }
 ?>
 <html>
 <head>
