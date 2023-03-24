@@ -200,3 +200,15 @@ function editerBien($pdo,$idEdit,$description,$prix,$adresse,$ville,$codepostal,
     }
     $cmmd->execute();
 }
+
+function get_all_id($pdo){
+    $sql = "SELECT idBien FROM biens";
+    $resultat = $pdo->query($sql);
+
+    $lesIds = array();
+    while($row = $resultat->fetch()){
+        $lesIds[] = $row['idBien'];
+    }
+    return $lesIds;
+    }
+
