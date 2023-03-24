@@ -34,7 +34,7 @@ function listerBiens($pdo){
     return $biens;
 }
 
-function ChercheBien($pdo, $type, $ville,$prix,$jardin,$surfaceMini,$piecesMini) {
+function ChercheBien($pdo, $type, $ville,$prix,$jardin,$surfaceMini,$piecesMini,$idChoix) {
     $sql = " SELECT titre,libelle,prix,ville,idBien FROM biens INNER JOIN types ON idType = idTypes where 1=1";
     if($type!=''){
         $sql.=" and libelle = :l";
@@ -57,6 +57,9 @@ function ChercheBien($pdo, $type, $ville,$prix,$jardin,$surfaceMini,$piecesMini)
     if($piecesMini!=''){
         $sql.=" and nbPièce >= :pm";
     }
+    if($idChoix!=''){
+        $sql.=" and idBien = :rId";
+    }
 
     $cmmd=$pdo->prepare($sql);
     if($type!=''){
@@ -73,6 +76,9 @@ function ChercheBien($pdo, $type, $ville,$prix,$jardin,$surfaceMini,$piecesMini)
     }
     if($piecesMini!=''){
         $cmmd->bindValue(':pm',$piecesMini);
+    }
+    if($idChoix!=''){
+        $cmmd->bindValue(':rId',$idChoix);
     }
     $cmmd->execute();
     $nbr=$cmmd->rowCount();
