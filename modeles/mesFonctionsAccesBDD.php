@@ -26,8 +26,54 @@ function deconnexionBDD($cnx)
     $cnx=null;
 }
 
-function listerBiens($pdo){
+function listerBiens($pdo, $idChoix, $ville, $type, $prix){
     $sql = " SELECT titre,libelle,prix,ville,idBien FROM biens INNER JOIN types ON idType = idTypes ";
+    if($idChoix!=''){
+        if($idChoix=='idAsc'){
+            $sql.=" ORDER by idBien ASC";
+        }
+        if($idChoix=='idDesc'){
+            $sql.=" ORDER by idBien DESC";
+        }
+    }
+    else{
+        if($ville!=''){
+            if($ville=='villeAsc'){
+                $sql.=" ORDER BY ville ASC";
+            }
+            if($ville=='villeDesc'){
+                $sql.=" ORDER BY ville DESC";
+            }
+            if($type=='type'){
+                $sql.=", idType ASC ";
+            }
+            if($prix=='prixAsc'){
+                $sql.=", prix ASC";
+            }
+            if($prix=='prixDesc'){
+                $sql.=", prix DESC";
+            }
+        }
+        if($type!='' && $ville==''){
+            if($type=='type'){
+                $sql.=" ORDER BY idType ASC ";
+            }
+            if($prix=='prixAsc'){
+                $sql.=", prix ASC";
+            }
+            if($prix=='prixDesc'){
+                $sql.=", prix DESC";
+            }
+        }
+        if($prix!='' && $type=='' && $ville==''){
+            if($prix=='prixAsc'){
+                $sql.="ORDER BY prix ASC";
+            }
+            if($prix=='prixDesc'){
+                $sql.="ORDER BY prix DESC";
+            }
+        }    
+    }
     $test=$pdo->prepare($sql);
     $test->execute();
     $biens = $test->fetchAll();
