@@ -66,7 +66,9 @@
                   </div>
                 </div>
                 </div>
+                <div id="rechercher">
                 <input type="submit" value="Rechercher">
+                </div>
                 </form>
                 <!--<button onclick="window.location.href = '../autres/listerBiens.php';">Afficher la liste triée</button> -->
 
