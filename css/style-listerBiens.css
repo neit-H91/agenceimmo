@@ -98,3 +98,9 @@ th, td{
 select{
     text-align:center;
 }
+
+#rechercher{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
