@@ -41,3 +41,14 @@ option{
     margin:3px;
 }
 
+table{
+    table-layout: fixed;
+    width: 100%;
+    border-collapse: collapse;
+    border: 2px solid black;
+}
+  
+th, td{
+    padding: 4px;
+    text-align: center;
+}  
