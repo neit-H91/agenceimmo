@@ -9,11 +9,27 @@
         $PM=$_POST['piecesMini'];
         $ID=$_POST['idChoix'];
         $biens = ChercheBien($pdo, $T, $V,$P,$J,$SM,$PM,$ID);
+        //$oui=$biens->rowCount();
+        //if($biens->fetch()){
+            echo '<center><div class="liste"><table>';
+        echo '<tr>';
+        echo '<th class="thliste">Référence</th>';
+        echo '<th class="thliste">Ville</th>';
+        echo '<th class="thliste">Type</th>';
+        echo '<th class="thliste">Prix</th>';
+        echo '<th class="thliste">Voir le bien</th>';
+        echo '</tr>';
+
         foreach ($biens as $unBien){          
-            echo '<option value="'.'">'.'- '.$unBien['titre'].', un(e) '.$unBien['libelle']
-            .' au prix de '.$unBien['prix'].'€ à '.$unBien['ville'].'</option>'
-    ?>
-            <a href="AfficherBien.php?id=<?php echo $unBien['idBien'] ?>"> Cliquez-ici pour le voir </a>
-    <?php                 
-        }         
-    ?> 
+            echo '<tr>';
+            echo '<td class="tdliste">' . $unBien['idBien'] . '</td>';
+            echo '<td class="tdliste">' . $unBien['ville'] . '</td>';
+            echo '<td class="tdliste">' . $unBien['libelle'] . '</td>';
+            echo '<td class="tdliste">' . $unBien['prix'] . '</td>';
+            echo '<td class="tdliste">' ?><a href="AfficherBien.php?id=<?php echo $unBien['idBien'] ?>"> Cliquez-ici pour le voir </a></td>
+            <?php
+            echo '</tr>';
+        }
+        echo '</table></div></center>';
+        //$pdo = null;
+?>
