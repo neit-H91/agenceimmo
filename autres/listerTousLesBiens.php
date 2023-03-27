@@ -22,7 +22,7 @@ $pdo = connexionBDD();
             echo '<td class="tdliste">' . $unBien['idBien'] . '</td>';
             echo '<td class="tdliste">' . $unBien['ville'] . '</td>';
             echo '<td class="tdliste">' . $unBien['libelle'] . '</td>';
-            echo '<td class="tdliste">' . $unBien['prix'] . '</td>';
+            echo '<td class="tdliste">' . $unBien['prix'] .' €'. '</td>';
             echo '<td class="tdliste">' ?><a href="AfficherBien.php?id=<?php echo $unBien['idBien'] ?>"> Cliquez-ici pour le voir </a></td>
             <?php
             echo '</tr>';
