@@ -6,7 +6,6 @@
         <nav>
             <h1><a href="../index.html">Immobilier</a></h1>
             <div class="right">
-                <p><a href="../vuescontroleurs/acheter/acheter-categories.php">Acheter</a></p>
                 <p><a class="btn-contact" href="../vuescontroleurs/contact.php">Contact</a></p>
                 <p><a class="btn-contact" onclick="window.location.href = '../vuescontroleurs/formRechercheBien.php';">Chercher un Bien</a></p>
                 <?php
