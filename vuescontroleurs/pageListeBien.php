@@ -85,7 +85,10 @@
                     if (isset($_POST["ID"]) || isset($_POST["VILLE"]) || isset($_POST["TYPE"]) || isset($_POST["PRIX"])){                                
                       include('../autres/listerBiens.php');
                     }
-    	            ?>
+                    else{
+                      include('../autres/listerTousLesBiens.php');
+                    }
+    	          ?>
                 </div>
             </div>
         </div>
