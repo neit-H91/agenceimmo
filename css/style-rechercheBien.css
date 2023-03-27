@@ -60,3 +60,16 @@ form{
 #haut{
     padding-right:2%;
 }
+
+table{
+    table-layout: fixed;
+    width: 80%;
+    border-collapse: collapse;
+    border: 2px solid black;
+    margin-bottom:3%;
+}
+  
+th, td{
+    padding: 4px;
+    text-align: center;
+}  
