@@ -26,13 +26,13 @@
                       <option value="idDesc">Dans l'ordre décroissant</option>
                     </select>                                
                   </div>
-                  <div class="pictos">
-                    <a class="picto-item" id="pdt" href="#" aria-label="-Saisissez 1 pour une maison \n -Saisissez 2 pour un appartement</br>-Saisissez 3 pour un terrain</br>-Saisissez 4 pour un local</br>-Saisissez 5 pour un immeuble</br>">?</a>
-                  </div>
                 </div>
-
+                <div id="ou">
+                  <a>OU</a>
+                </div>
+                <div id="baspage">
                 <div class="blocfin">
-                  <div class="colonne1">
+                  <div class="colonne2">
                     <label for="formAjoutTypeBien">Triez en fonction de la ville :</label>
                     </br>
                     <select name="VILLE" id="formAjoutTypeBien">
@@ -41,13 +41,10 @@
                       <option value="villeDesc">Dans l'ordre désalphabétique</option>
                     </select>                                
                   </div>
-                  <div class="pictos">
-                    <a class="picto-item" id="pdt" href="#" aria-label="-Saisissez 1 pour une maison \n -Saisissez 2 pour un appartement</br>-Saisissez 3 pour un terrain</br>-Saisissez 4 pour un local</br>-Saisissez 5 pour un immeuble</br>">?</a>
-                  </div>
                 </div>
 
                 <div class="blocfin">
-                  <div class="colonne1">
+                  <div class="colonne2">
                     <label for="formAjoutTypeBien">Triez en fonction du type de Bien :</label>
                     </br>
                     <select name="TYPE" id="formAjoutTypeBien">
@@ -55,13 +52,10 @@
                       <option value="type">Oui</option> 
                     </select>                                
                   </div>
-                  <div class="pictos">
-                    <a class="picto-item" id="pdt" href="#" aria-label="-Saisissez 1 pour une maison \n -Saisissez 2 pour un appartement</br>-Saisissez 3 pour un terrain</br>-Saisissez 4 pour un local</br>-Saisissez 5 pour un immeuble</br>">?</a>
-                  </div>
                 </div>
 
                 <div class="blocfin">
-                  <div class="colonne1">
+                  <div class="colonne2">
                     <label for="formAjoutTypeBien">Triez en fonction du prix :</label>
                     </br>
                     <select name="PRIX" id="formAjoutTypeBien">
@@ -70,9 +64,7 @@
                       <option value="prixDesc">Dans l'ordre décroissant</option>
                     </select>                                
                   </div>
-                  <div class="pictos">
-                    <a class="picto-item" id="pdt" href="#" aria-label="-Saisissez 1 pour une maison \n -Saisissez 2 pour un appartement</br>-Saisissez 3 pour un terrain</br>-Saisissez 4 pour un local</br>-Saisissez 5 pour un immeuble</br>">?</a>
-                  </div>
+                </div>
                 </div>
                 <input type="submit" value="Rechercher">
                 </form>
@@ -100,3 +92,4 @@
 
 </body>
 </html>
+
