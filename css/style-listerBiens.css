@@ -53,3 +53,48 @@ th, td{
     padding: 4px;
     text-align: center;
 }  
+
+.bloc{
+    text-align:center;
+    display:flex;
+    flex-direction:row;
+}
+
+.blocfin{
+    text-align:center;
+    display:flex;
+    flex-direction:row;
+}
+
+.colonne1{
+    width:100%;
+    margin-bottom:3%;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+
+.colonne2{
+    width:84%;
+    margin-top:5%;
+    margin-bottom:10%;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+
+#baspage{
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    justify-content:center;
+}
+
+#ou{
+    width:100%;
+    text-align:center;
+}
+
+select{
+    text-align:center;
+}
