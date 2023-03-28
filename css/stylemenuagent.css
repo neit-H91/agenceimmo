@@ -54,3 +54,17 @@ body {
     padding:10px;
     text-align: center;
 }
+
+table{
+    table-layout: fixed;
+    width: 100%;
+    border-collapse: collapse;
+    border: 2px solid black;
+    margin-bottom:3%;
+}
+  
+th, td{
+    padding: 4px;
+    text-align: center;
+}  
+
