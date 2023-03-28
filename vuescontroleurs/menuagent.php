@@ -28,7 +28,7 @@ include_once '../autres/recuperationNom.php';
             <section class="acheter-links">
                 <button onclick="window.location.href = 'formAjoutBien.php';">Ajouter un bien</button>
                 <button onclick="window.location.href = 'formEditerBien.php';">Modifier un bien</button>
-                <button onclick="window.location.href = '#';">Supprimer un bien</button>
+                <button onclick="window.location.href = 'supressionbien.php';">Supprimer un bien</button>
               <button onclick="window.location.href = '../autres/deconnexion.php';">Se déconnecter</button>
             </section>
         </div>
