@@ -80,7 +80,7 @@ function listerBiens($pdo, $idChoix, $ville, $type, $prix){
     return $biens;
 }
 
-function ChercheBien($pdo, $type, $ville,$prix,$jardin,$surfaceMini,$piecesMini,$idChoix) {
+function ChercheBien($pdo, $type, $ville,$prixMin,$prixMax,$jardin,$surfaceMini,$piecesMini,$idChoix) {
     $sql = " SELECT titre,libelle,prix,ville,idBien FROM biens INNER JOIN types ON idType = idTypes where 1=1";
     if($idChoix!=''){
         $sql.=" and idBien = :rId";
@@ -92,8 +92,14 @@ function ChercheBien($pdo, $type, $ville,$prix,$jardin,$surfaceMini,$piecesMini,
         if($ville!=''){
             $sql.=" and ville = :v";
         }
-        if($prix!=''){
-            $sql.=" and prix <= :p";
+        if($prixMin!='' || $prixMax!=''){
+            if($prixMin==''){
+                $prixMin=0;
+            }
+            if($prixMax==''){
+                $prixMax=1000000000;
+            }
+            $sql.=" and prix >= :pmin and prix <= :pmax";
         }
         if($jardin==''){
             $sql.=" and surfJardin is null";
@@ -120,8 +126,11 @@ function ChercheBien($pdo, $type, $ville,$prix,$jardin,$surfaceMini,$piecesMini,
         if($ville!=''){
             $cmmd->bindValue(':v', $ville);
         }
-        if($prix!=''){
-            $cmmd->bindValue(':p',$prix);
+        if($prixMin!=''){
+            $cmmd->bindValue(':pmin',$prixMin);
+        }
+        if($prixMax!=''){
+            $cmmd->bindValue(':pmax',$prixMax);
         }
         if($surfaceMini!=''){
             $cmmd->bindValue(':sm', $surfaceMini);
@@ -142,6 +151,7 @@ function ChercheBien($pdo, $type, $ville,$prix,$jardin,$surfaceMini,$piecesMini,
         return($biens);
     } 
 }
+
 
 
 function recuperation($pdo,$username)
