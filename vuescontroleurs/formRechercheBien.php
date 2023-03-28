@@ -61,8 +61,13 @@ session_start();
                                 </select>
                             </div>
                             <div id="champ3" class="entree">
-                                <label for="parametre1">Saisissez prix :</label>
-                                <input type="text" id="parametre1" name="prix">
+                                <label for="parametre1">Saisissez prix minimum :</label>
+                                <input type="text" id="parametre1" name="prixMin">
+                            </div>
+
+                            <div id="champ3" class="entree">
+                                <label for="parametre1">Saisissez prix maximum:</label>
+                                <input type="text" id="parametre1bis" name="prixMax">
                             </div>
 
                             </div>
