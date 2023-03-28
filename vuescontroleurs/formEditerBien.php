@@ -160,14 +160,17 @@ if(empty($_SESSION['login']))
                                 <div class="pictos">
                                     <a class="picto-item" id="pdt" href="#" aria-label="Saisissez le titre, c'est à dire la phrase qui décrira le bien">?</a>
                                 </div>
-                            </div>     
+                            </div>    
+
+			   <div class="blocfin">
+                                <div id="btnEnregistrer">
+                                    </br>               
+                                    <input type="submit" value="Enregistrer les nouvelles informations">
+                                </div>
+                            </div>  
+
                     </div>
 
-                    
-
-                    <div id="formulairelogin">
-                        <input type="submit" value="Enregistrer les nouvelles informations">
-                    </div>
                 </form>
 
             </div>               
