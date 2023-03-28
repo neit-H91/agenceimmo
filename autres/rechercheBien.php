@@ -3,12 +3,13 @@
         $pdo = connexionBDD();           
         $V=$_POST['ville'];   
         $T=$_POST['type'];
-        $P=$_POST['prix'];
+        $P=$_POST['prixMin'];
         $J=$_POST['jardin'];
         $SM=$_POST['surfaceMini'];
         $PM=$_POST['piecesMini'];
+        $D=$_POST['prixMax'];
         $ID=$_POST['idChoix'];
-        $biens = ChercheBien($pdo, $T, $V,$P,$J,$SM,$PM,$ID);
+        $biens = ChercheBien($pdo, $T, $V,$P,$D,$J,$SM,$PM,$ID);
         //$oui=$biens->rowCount();
         if($biens!=null){
             echo '<center><div class="liste"><table>';
