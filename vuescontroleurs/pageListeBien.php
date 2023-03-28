@@ -59,9 +59,29 @@
                     <label for="formAjoutTypeBien">Triez en fonction du prix :</label>
                     </br>
                     <select name="PRIX" id="formAjoutTypeBien">
-                      <option value="">Non</option>
-                      <option value="prixAsc">Dans l'ordre croissant</option>
-                      <option value="prixDesc">Dans l'ordre décroissant</option>
+                    <option value="">Non</option>
+                    <?php
+                    if (isset($_POST["PRIX"])) {
+                      if ($_POST["PRIX"]=='prixAsc') {
+                        echo ' <option value="prixAsc" selected>Dans l\'ordre croissant</option>';
+                      }
+                      else {
+                        echo '<option value="prixAsc">Dans l\'ordre croissant</option>';
+                      }
+                    }
+                    if (isset($_POST["PRIX"])) {
+                      if ($_POST["PRIX"]=='prixDesc') {
+                        echo ' <option value="prixDesc" selected>Dans l\'ordre décroissant</option>';
+                      }
+                      else {
+                        echo '<option value="prixDesc">Dans l\'ordre décroissant</option>';
+                      }
+
+                    }else{
+                      echo '<option value="prixAsc">Dans l\'ordre croissant</option>';
+                      echo '<option value="prixDesc">Dans l\'ordre décroissant</option>';
+                    }
+                    ?> 
                     </select>                                
                   </div>
                 </div>
