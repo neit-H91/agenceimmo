@@ -23,7 +23,7 @@
     $image5 = '../img/img-biens/'.$desInformations['idBien'].'-5.jpg';
     $image6 = '../img/img-biens/'.$desInformations['idBien'].'-6.jpg';
     $image7 = '../img/img-biens/'.$desInformations['idBien'].'-7.jpg';
-    if (!file_exists($image1)){
+    /*if (!file_exists($image1)){
         $image1 = '../img/img-biens/not-found.jpg';
     }
     if (!file_exists($image2)){
@@ -43,7 +43,7 @@
     }
     if (!file_exists($image7)){
         $image7 = '../img/img-biens/not-found.jpg';
-    }
+    }*/
 ?>
 <html>
 <head>
