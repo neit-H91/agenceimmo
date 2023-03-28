@@ -112,19 +112,19 @@
             <div class="description">
                 <br>
                 <div class="caracs">
-                <div class="un"><img src="../../img/pictos/chambres picto.png" alt="">
+                <div class="un"><img src="../img/pictos/chambres picto.png" alt="">
                 <?php
                     echo '<h4> ' . $desInformations['nbPièce'] .' Pièces </h4>';
                 ?>
                 </div>
                 <div class="deux">
-                    <img src="../../img/pictos/sdb picto.png" alt="">
+                    <img src="../img/pictos/sdb picto.png" alt="">
                     <?php
                      echo '<h4> ' . $desInformations['surfBien'] .' m² de surface habitable </h4>';
                     ?>
                 </div>
                 <div class="trois">
-                    <img src="../../img/pictos/surface picto.png" alt="">
+                    <img src="../img/pictos/surface picto.png" alt="">
                     <?php
                         echo '<h4> ' . $desInformations['surfJardin'] .' m²  de jardin </h4>';
                     ?>
