@@ -9,6 +9,10 @@
 }
 body {
     margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-width: none;
+    min-height: 100vh;
 }
 #page{
     width: 100%;
