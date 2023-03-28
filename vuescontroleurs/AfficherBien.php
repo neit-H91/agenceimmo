@@ -12,7 +12,7 @@
     $bdd = connexionBDD();
     $lesIds = get_all_id($bdd);
     if(!in_array($testPage, $lesIds)){
-        header('Location: http://localhost/agenceimmo-Sprint4/vuescontroleurs/formRechercheBien.php');
+        header('Location: formRechercheBien.php');
         exit;
     }
     //Les Images
