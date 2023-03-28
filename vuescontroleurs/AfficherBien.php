@@ -15,6 +15,35 @@
         header('Location: http://localhost/agenceimmo-Sprint4/vuescontroleurs/formRechercheBien.php');
         exit;
     }
+    //Les Images
+    $image1 = '../img/img-biens/'.$desInformations['idBien'].'-1.jpg';
+    $image2 = '../img/img-biens/'.$desInformations['idBien'].'-2.jpg';
+    $image3 = '../img/img-biens/'.$desInformations['idBien'].'-3.jpg';
+    $image4 = '../img/img-biens/'.$desInformations['idBien'].'-4.jpg';
+    $image5 = '../img/img-biens/'.$desInformations['idBien'].'-5.jpg';
+    $image6 = '../img/img-biens/'.$desInformations['idBien'].'-6.jpg';
+    $image7 = '../img/img-biens/'.$desInformations['idBien'].'-7.jpg';
+    if (!file_exists($image1)){
+        $image1 = '../img/img-biens/alt1.jpg';
+    }
+    if (!file_exists($image2)){
+        $image2 = '../img/img-biens/alt2.jpg';
+    }
+    if (!file_exists($image3)){
+        $image3 = '../img/img-biens/alt3.jpg';
+    }
+    if (!file_exists($image4)){
+        $image4 = '../img/img-biens/alt4.jpg';
+    }
+    if (!file_exists($image5)){
+        $image5 = '../img/img-biens/alt5.png';
+    }
+    if (!file_exists($image6)){
+        $image6 = '../img/img-biens/alt6.png';
+    }
+    if (!file_exists($image7)){
+        $image7 = '../img/img-biens/alt7.jpg';
+    }
 ?>
 <html>
 <head>
@@ -59,10 +88,7 @@
                     <div class="row1">
 
                     <?php
-		                $image2 = '../img/img-biens/'.$desInformations['id'].'-2.jpg';
-                        $image3 = '../img/img-biens/'.$desInformations['id'].'-3.jpg';
-                        $image4 = '../img/img-biens/'.$desInformations['id'].'-4.jpg';
-		                echo "<img src='$image2' alt='Emplacement pour une image'>";
+		        echo "<img src='$image2' alt='Emplacement pour une image'>";
                         echo "<img src='$image3' alt='Emplacement pour une image'>";
                         echo "<img src='$image4' alt='Emplacement pour une image'>";
 
@@ -72,10 +98,7 @@
                     <div class="row2">
 
                     <?php
-		                $image5 = '../img/img-biens/'.$desInformations['id'].'-5.jpg';
-                        $image6 = '../img/img-biens/'.$desInformations['id'].'-6.jpg';
-                        $image7 = '../img/img-biens/'.$desInformations['id'].'-7.jpg';
-		                echo "<img src='$image5' alt='Emplacement pour une image'>";
+		        echo "<img src='$image5' alt='Emplacement pour une image'>";
                         echo "<img src='$image6' alt='Emplacement pour une image'>";
                         echo "<img src='$image7' alt='Emplacement pour une image'>";
 	                 ?>
