@@ -28,14 +28,21 @@ include_once '../autres/recuperationNom.php';
             <?php
                     include_once '../modeles/mesFonctionsAccesBDD.php';
                     $bdd = connexionBDD();
-                    ?>
-            <form action="">
+                    if (isset($_POST["idbien"])){
+                        include('../autres/supprBien.php');
+                    }
+                    
+
+                ?>
+                    
+            <form method="post" action="">
                 <div>
-                    <label for="id">choisir l'id du bien a supprimer</label>
-                    <select name="idbien" id="idbien">
+                    <?php include('../autres/listerTousLesBiens.php'); ?>
+                        <label for="id">choisir l'id du bien a supprimer</label>
+                        <select name="idbien" id="idbien">
                         <option value=""></option>
                         <?php
-                                    $reponse = $bdd->query('SELECT distinct idBien FROM biens');
+                                    $reponse = $bdd->query('SELECT distinct idBien FROM biens order by idBien asc');
                                     while ($donnes = $reponse->fetch()) {
                                         ?>
                                         <option value="<?php echo $donnes['idBien']; ?>"><?php echo $donnes['idBien']; ?></option>;
@@ -43,13 +50,18 @@ include_once '../autres/recuperationNom.php';
                                     }
                                     $reponse->closeCursor();
                                     ?>
-                    </select>
+                        </select>
+                        <input type="submit" value="Supprimer">
+                    
                 </div>
             </form>
 
             <section class="acheter-links">
               <button onclick="window.location.href = 'menuagent.php';">Retour menu</button>
             </section>
+            <div id="result">
+                
+            </div>
         </div>
     </div>
         
