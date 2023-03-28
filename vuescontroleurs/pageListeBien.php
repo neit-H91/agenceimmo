@@ -49,7 +49,18 @@
                     </br>
                     <select name="TYPE" id="formAjoutTypeBien">
                       <option value="">Non</option>
-                      <option value="type">Oui</option> 
+                      <?php
+                        if (isset($_POST["TYPE"])) {
+                        if ($_POST["TYPE"]=='type') {
+                            echo '<option value="type" selected>Oui</option>';
+                        }
+                        else {
+                            echo '<option value="type">Oui</option>';
+                        }
+                        }else{
+                            echo '<option value="type">Oui</option>';
+                        }
+                    ?> 
                     </select>                                
                   </div>
                 </div>
