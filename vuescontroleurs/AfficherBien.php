@@ -24,25 +24,25 @@
     $image6 = '../img/img-biens/'.$desInformations['idBien'].'-6.jpg';
     $image7 = '../img/img-biens/'.$desInformations['idBien'].'-7.jpg';
     if (!file_exists($image1)){
-        $image1 = '../img/img-biens/alt1.jpg';
+        $image1 = '../img/img-biens/not-found.jpg';
     }
     if (!file_exists($image2)){
-        $image2 = '../img/img-biens/alt2.jpg';
+        $image2 = '../img/img-biens/not-found.jpg';
     }
     if (!file_exists($image3)){
-        $image3 = '../img/img-biens/alt3.jpg';
+        $image3 = '../img/img-biens/not-found.jpg';
     }
     if (!file_exists($image4)){
-        $image4 = '../img/img-biens/alt4.jpg';
+        $image4 = '../img/img-biens/not-found.jpg';
     }
     if (!file_exists($image5)){
-        $image5 = '../img/img-biens/alt5.png';
+        $image5 = '../img/img-biens/not-found.jpg';
     }
     if (!file_exists($image6)){
-        $image6 = '../img/img-biens/alt6.png';
+        $image6 = '../img/img-biens/not-found.jpg';
     }
     if (!file_exists($image7)){
-        $image7 = '../img/img-biens/alt7.jpg';
+        $image7 = '../img/img-biens/not-found.jpg';
     }
 ?>
 <html>
@@ -166,4 +166,3 @@
             include('../inc/piedDePage.inc');
             ?>
 </html>
-
