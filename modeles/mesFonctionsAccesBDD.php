@@ -278,3 +278,9 @@ function get_all_id($pdo){
     return $lesIds;
     }
 
+function supprBien($pdo,$id){
+    $sql="delete from biens where idBien = :id";
+    $cmmd=$pdo->prepare($sql);
+    $cmmd->bindValue(':id', $id,PDO::PARAM_STR);
+    $cmmd->execute();
+}
