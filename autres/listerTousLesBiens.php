@@ -6,7 +6,7 @@ $pdo = connexionBDD();
 <?php
     include_once '../modeles/mesFonctionsAccesBDD.php';
     //$lesBiens = listerBiens($pdo);
-    $reponse = $pdo->query('SELECT idBien,libelle,prix,ville FROM biens INNER JOIN types ON idType = idTypes');
+    $reponse = $pdo->query('SELECT idBien,libelle,prix,ville FROM biens INNER JOIN types ON idType = idTypes order by idBien');
 
         echo '<center><div class="liste"><table>';
         echo '<tr>';
