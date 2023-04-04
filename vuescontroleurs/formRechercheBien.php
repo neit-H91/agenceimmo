@@ -32,7 +32,7 @@ session_start();
 
                             <div id="champ1" class="entree">
                                 <label for="ville">Ville</label>
-                                <select name="ville" id="ville">
+                                <select name="idVille" id="idVille">
                                     <option value="">Peu Importe</option>
                                     <?php          
                                     include_once '../modeles/mesFonctionsAccesBDD.php';
@@ -40,7 +40,7 @@ session_start();
                                     $reponse = getAllVille($bdd);
                                     foreach($reponse as $donnes){
                                         ?>
-                                        <option value="<?php echo $donnes['idVille']; ?>"><?php echo $donnes['libelleVille']; ?></option>;
+                                        <option value="<?php  echo $donnes['idVille']; ?>"><?php echo $donnes['libelleVille']; ?></option>;
                                         <?php
                                     }
                                     ?>
