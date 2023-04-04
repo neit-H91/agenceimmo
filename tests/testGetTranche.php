@@ -8,6 +8,6 @@ $lePdo = connexionBDD();
 
 $id = 1;
 
-getTranche($lePdo, $ville);
+$test = getTranche($lePdo, $ville);
 
-var_dump($lePdo);
+var_dump($test);
