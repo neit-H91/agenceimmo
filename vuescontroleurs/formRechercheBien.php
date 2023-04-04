@@ -33,18 +33,20 @@ session_start();
                             <div id="champ1" class="entree">
                                 <label for="ville">Ville</label>
                                 <select name="ville" id="ville">
-                                    <option value=""> </option>
-                                    <?php
-                                    $reponse = $bdd->query('SELECT distinct ville FROM biens');
-                                    while ($donnes = $reponse->fetch()) {
+                                    <option value="">Peu Importe</option>
+                                    <?php          
+                                    include_once '../modeles/mesFonctionsAccesBDD.php';
+                                    $bdd = connexionBDD();                         
+                                    $reponse = getAllVille($bdd);
+                                    foreach($reponse as $donnes){
                                         ?>
-                                        <option value="<?php echo $donnes['ville']; ?>"><?php echo $donnes['ville']; ?></option>;
+                                        <option value="<?php echo $donnes['idVille']; ?>"><?php echo $donnes['libelleVille']; ?></option>;
                                         <?php
                                     }
-                                    $reponse->closeCursor();
                                     ?>
                                 </select>
                             </div>
+
                             <div id="champ2" class="entree">
                                 <label for="type">Choisissez le type de bien</label>
                                 <select name="type" id="type">
@@ -60,14 +62,23 @@ session_start();
                                     ?>
                                 </select>
                             </div>
-                            <div id="champ3" class="entree">
-                                <label for="parametre1">Saisissez prix minimum :</label>
-                                <input type="text" id="parametre1" name="prixMin">
-                            </div>
 
                             <div id="champ3" class="entree">
-                                <label for="parametre1">Saisissez prix maximum:</label>
-                                <input type="text" id="parametre1bis" name="prixMax">
+                                <label for="prix">Saisissez une tranche de prix </label>
+                                <select name="prix" id ="prix">
+                                    <option value="">Aucune</option>
+                                    <option value="1"> 0 - 100 000 €</option>
+                                    <option value="2">100 000 - 150 000 €</option>
+                                    <option value="3">150 000 - 200 000 €</option>
+                                    <option value="4">200 000 - 250 000 €</option>
+                                    <option value="5">250 000 - 300 000 €</option>
+                                    <option value="6">300 000 - 350 000 €</option>
+                                    <option value="7">350 000 - 400 000 €</option>
+                                    <option value="8">400 000 - 500 000 €</option>
+                                    <option value="9">500 000 - 600 000 €</option>
+                                    <option value="10">600 000 - 700 000 €</option>
+                                    <option value="11">700 000 - 800 000 €</option>
+                                </select>
                             </div>
 
                             </div>
@@ -109,7 +120,7 @@ session_start();
                 </div>
                 <div id="recherche">
                 <?php
-                if (isset($_POST["ville"]) || isset($_POST["type"]) || isset($_POST["jardin"]) || isset($_POST["prix"])){                    
+                if (/*isset($_POST["ville"]) ||*/ isset($_POST["type"]) || isset($_POST["jardin"]) || isset($_POST["prix"])){                    
                     include('../autres/rechercheBien.php');
                 }   
     	        ?>
@@ -126,3 +137,4 @@ session_start();
     </body>
 
 </html>
+
