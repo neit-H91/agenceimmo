@@ -310,4 +310,19 @@ function getTranche($pdo,$id){
     $test->execute();
 }
 
+function ajouterTranche($pdo){
+    $sql = "SELECT max(prixMax) from tranche; ";
+    $resultat = $pdo->execute($sql);
+    $mini = $resultat;
+    $maxi = $mini + 100000;
+    $requeteDeux = "INSERT INTO tranche (prixMin,PrixMax) VALUES($mini,$maxi) ;";
+    $resultatDeux = $pdo->execute($sql);
+}
 
+/*
+if($prixrentré > prixMax){
+   while($prix > prixMax){
+    execute->...
+   } 
+}
+*/
