@@ -27,7 +27,7 @@ function deconnexionBDD($cnx)
 }
 
 function listerBiens($pdo, $idChoix, $ville, $type, $prix){
-    $sql = " SELECT titre,libelle,prix,ville,idBien FROM biens INNER JOIN types ON idType = idTypes ";
+    $sql = " SELECT titre,libelle,prix,libelleVille,idBien FROM biens INNER JOIN types ON idType = idTypes INNER JOIN ville on idVilles = idVille ";
     if($idChoix!=''){
         if($idChoix=='idAsc'){
             $sql.=" ORDER by idBien ASC";
@@ -39,10 +39,10 @@ function listerBiens($pdo, $idChoix, $ville, $type, $prix){
     else{
         if($ville!=''){
             if($ville=='villeAsc'){
-                $sql.=" ORDER BY ville ASC";
+                $sql.=" ORDER BY libelleVille ASC";
             }
             if($ville=='villeDesc'){
-                $sql.=" ORDER BY ville DESC";
+                $sql.=" ORDER BY libelleVille DESC";
             }
             if($type=='type'){
                 $sql.=", idType ASC ";
