@@ -6,6 +6,6 @@ include_once '../modeles/mesFonctionsAccesBDD.php';
 //appel de la fonction qui permet de se connecter à la base de données
 $lePdo = connexionBDD();
 
-getAllVille($lePdo);
+$test = getAllVille($lePdo);
 
-var_dump($lePdo);
+var_dump($test);
