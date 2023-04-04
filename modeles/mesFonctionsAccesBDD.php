@@ -185,7 +185,7 @@ function ajouterBien($pdo, $description, $prix, $adresse, $ville, $codepostal, $
 }
 
 function AfficheInformation($pdo,$id){
-    $sql = "SELECT idBien,titre,descript, prix, adresse, ville,codeP,surfBien,surfJardin,nbPièce FROM `biens` WHERE idBien = :id ";
+    $sql = "SELECT idBien,titre,descript, prix, adresse, libelleVille,codeP,surfBien,surfJardin,nbPièce FROM `biens` INNER JOIN ville on idVilles = idVille WHERE idBien = :id ";
     $test=$pdo->prepare($sql);
     $test->bindValue(':id',$id,PDO::PARAM_INT);
     $test->execute();
