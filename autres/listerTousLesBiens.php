@@ -6,7 +6,7 @@ $pdo = connexionBDD();
 <?php
     include_once '../modeles/mesFonctionsAccesBDD.php';
     //$lesBiens = listerBiens($pdo);
-    $reponse = $pdo->query('SELECT idBien,libelle,prix,ville FROM biens INNER JOIN types ON idType = idTypes order by idBien');
+    $reponse = $pdo->query('SELECT idBien,libelle,prix,libelleVille FROM biens INNER JOIN types ON idType = idTypes INNER JOIN ville on idVilles = idVille order by idBien');
 
         echo '<center><div class="liste"><table>';
         echo '<tr>';
@@ -20,7 +20,7 @@ $pdo = connexionBDD();
         while($unBien = $reponse->fetch()){ // Renvoit les valeurs de la bdd
             echo '<tr>';
             echo '<td class="tdliste">' . $unBien['idBien'] . '</td>';
-            echo '<td class="tdliste">' . $unBien['ville'] . '</td>';
+            echo '<td class="tdliste">' . $unBien['libelleVille'] . '</td>';
             echo '<td class="tdliste">' . $unBien['libelle'] . '</td>';
             echo '<td class="tdliste">' . $unBien['prix'] .' €'. '</td>';
             echo '<td class="tdliste">' ?><a href="AfficherBien.php?id=<?php echo $unBien['idBien'] ?>"> Cliquez-ici pour le voir </a></td>
