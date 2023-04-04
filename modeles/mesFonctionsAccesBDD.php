@@ -80,8 +80,17 @@ function listerBiens($pdo, $idChoix, $ville, $type, $prix){
     return $biens;
 }
 
-function ChercheBien($pdo, $type, $ville,$prixMin,$prixMax,$jardin,$surfaceMini,$piecesMini,$idChoix) {
-    $sql = " SELECT titre,libelle,prix,ville,idBien FROM biens INNER JOIN types ON idType = idTypes where 1=1";
+function ChercheBien($pdo, $type, /*$ville,*/$tranchePrix,$jardin,$surfaceMini,$piecesMini,$idChoix) {
+    $sql = " SELECT titre,libelle,prix,/*ville,*/idBien FROM biens INNER JOIN types ON idType = idTypes where 1=1";
+    $laTranche = NULL;
+    if($tranchePrix!=''){
+        $SQLI = "SELECT prixMin, prixMax FROM tranche where idTranche = :tr";
+        $commande=$pdo->prepare($SQLI);
+        $commande->bindValue(':tr',$tranchePrix);
+        $commande->execute();
+        $laTranche=$commande->fetch();
+    }
+
     if($idChoix!=''){
         $sql.=" and idBien = :rId";
     }
@@ -89,16 +98,10 @@ function ChercheBien($pdo, $type, $ville,$prixMin,$prixMax,$jardin,$surfaceMini,
         if($type!=''){
             $sql.=" and libelle = :l";
         }
-        if($ville!=''){
+        /*if($ville!=''){
             $sql.=" and ville = :v";
-        }
-        if($prixMin!='' || $prixMax!=''){
-            if($prixMin==''){
-                $prixMin=0;
-            }
-            if($prixMax==''){
-                $prixMax=1000000000;
-            }
+        }*/
+        if($tranchePrix!=''){
             $sql.=" and prix >= :pmin and prix <= :pmax";
         }
         if($jardin==''){
@@ -123,14 +126,14 @@ function ChercheBien($pdo, $type, $ville,$prixMin,$prixMax,$jardin,$surfaceMini,
         if($type!=''){
             $cmmd->bindValue(':l', $type);
         }
-        if($ville!=''){
+        /*if($ville!=''){
             $cmmd->bindValue(':v', $ville);
+        }*/
+        if($tranchePrix!=''){
+            $cmmd->bindValue(':pmin',$laTranche['prixMin']);
         }
-        if($prixMin!=''){
-            $cmmd->bindValue(':pmin',$prixMin);
-        }
-        if($prixMax!=''){
-            $cmmd->bindValue(':pmax',$prixMax);
+        if($tranchePrix!=''){
+            $cmmd->bindValue(':pmax',$laTranche['prixMax']);
         }
         if($surfaceMini!=''){
             $cmmd->bindValue(':sm', $surfaceMini);
@@ -151,6 +154,7 @@ function ChercheBien($pdo, $type, $ville,$prixMin,$prixMax,$jardin,$surfaceMini,
         return($biens);
     } 
 }
+
 
 
 
@@ -293,13 +297,10 @@ function ajoutVille($pdo,$ville){
 }
 
 function getAllVille($pdo){
-    $sql = "SELECT * libelle from ville";
-    $resultat = $pdo->query($sql);
-
-    $lesVilles = array();
-    while($row = $resultat->fetch()){
-        $lesVilles[] = $row['libelle'];
-    }
+    $sql = "SELECT idVille,libelleVille from ville";
+    $test=$pdo->prepare($sql);
+    $test->execute();
+    $lesVilles = $test->fetchAll();
     return $lesVilles;
 }
 
