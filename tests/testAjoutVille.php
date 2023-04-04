@@ -8,6 +8,6 @@ $lePdo = connexionBDD();
 
 $ville = "Utopia";
 
-ajoutVille($lePdo, $ville);
+$test = ajoutVille($lePdo, $ville);
 
-var_dump($lePdo);
+var_dump($test);
