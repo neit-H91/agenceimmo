@@ -84,11 +84,8 @@ function ChercheBien($pdo, $type,$idVille,$tranchePrix,$jardin,$surfaceMini,$pie
     $sql = " SELECT titre,libelle,prix,libelleVille,idBien FROM biens INNER JOIN types ON idType = idTypes INNER JOIN ville on idVilles = idVille where 1=1";
     $laTranche = NULL;
     if($tranchePrix!=''){
-        $SQLI = "SELECT prixMin, prixMax FROM tranche where idTranche = :tr";
-        $commande=$pdo->prepare($SQLI);
-        $commande->bindValue(':tr',$tranchePrix);
-        $commande->execute();
-        $laTranche=$commande->fetch();
+        $lePdo = connexionBDD();
+        $laTranche=getTranche($lePdo,$tranchePrix);      
     }
 
     if($idChoix!=''){
@@ -305,10 +302,12 @@ function getAllVille($pdo){
 }
 
 function getTranche($pdo,$id){
-    $sql = "SELECT prixMin, prixMax from tranche where id = :id ";
+    $sql = "SELECT prixMin, prixMax from tranche where idTranche = :id ";
     $test=$pdo->prepare($sql);
     $test->bindValue(':id', $id,PDO::PARAM_INT);
     $test->execute();
+    $laTranche = $test->fetch();
+    return $laTranche;
 }
 
 function ajouterTranche($pdo){
