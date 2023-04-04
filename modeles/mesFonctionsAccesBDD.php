@@ -284,3 +284,30 @@ function supprBien($pdo,$id){
     $cmmd->bindValue(':id', $id,PDO::PARAM_STR);
     $cmmd->execute();
 }
+
+function ajoutVille($pdo,$ville){
+    $sql = "INSERT INTO ville (libelle) value(:v)";
+    $test=$pdo->prepare($sql);
+    $test->bindValue(':v', $ville,PDO::PARAM_STR);
+    $test->execute();
+}
+
+function getAllVille($pdo){
+    $sql = "SELECT * libelle from ville";
+    $resultat = $pdo->query($sql);
+
+    $lesVilles = array();
+    while($row = $resultat->fetch()){
+        $lesVilles[] = $row['libelle'];
+    }
+    return $lesVilles;
+}
+
+function getTranche($pdo,$id){
+    $sql = "SELECT prixMin, prixMax from tranche where id = :id ";
+    $test=$pdo->prepare($sql);
+    $test->bindValue(':id', $id,PDO::PARAM_INT);
+    $test->execute();
+}
+
+
