@@ -19,7 +19,7 @@ $pdo = connexionBDD();
         foreach ($lesBiens as $unBien){
             echo '<tr>';
             echo '<td class="tdliste">' . $unBien['idBien'] . '</td>';
-            echo '<td class="tdliste">' . $unBien['ville'] . '</td>';
+            echo '<td class="tdliste">' . $unBien['libelleVille'] . '</td>';
             echo '<td class="tdliste">' . $unBien['libelle'] . '</td>';
             echo '<td class="tdliste">' . $unBien['prix'] .' €'. '</td>';
             echo '<td class="tdliste">' ?><a href="AfficherBien.php?id=<?php echo $unBien['idBien'] ?>"> Cliquez-ici pour le voir </a></td>
@@ -28,6 +28,6 @@ $pdo = connexionBDD();
         }
         echo '</table></div></center>';
         //$pdo = null;
-?>     
+?> 
 
 
