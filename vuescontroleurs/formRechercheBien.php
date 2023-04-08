@@ -50,7 +50,7 @@ session_start();
                             <div id="champ2" class="entree">
                                 <label for="type">Choisissez le type de bien</label>
                                 <select name="type" id="type">
-                                    <option value=""> </option>
+                                    <option value="">Peu importe</option>
                                     <?php
                                     $reponse = $bdd->query('SELECT distinct libelle FROM biens INNER JOIN types ON idType = idTypes');
                                     while ($donnes = $reponse->fetch()) {
