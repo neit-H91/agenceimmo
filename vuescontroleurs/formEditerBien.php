@@ -30,6 +30,9 @@ if(empty($_SESSION['login']))
 		 <p>Bienvenue sur votre formulaire d'édit des biens, ce formulaire vous permets d'éditer les informations d'un bien de la base de donées ,
                  une fois édité les informations seront  automatiquement mise à jour sur la page du bien, afin d'être sûr des valeurs à éditer vous pouvez survolez ou cliquez sur les 
                  bulles informations "?" à droite des zones de saisie, pour ne rien changer, laissez la zone de texte vide.</p>
+		  
+		<?php include('../autres/listerTousLesBiens.php'); ?>
+		    
                 <form action="../autres/editerBien.php" method="POST">
                     <div id="formulaire">
                         
