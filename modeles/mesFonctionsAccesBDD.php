@@ -165,13 +165,28 @@ function recuperation($pdo,$username)
 }
 
 function ajouterBien($pdo, $description, $prix, $adresse, $ville, $codepostal, $surfacebien, $surfacejardin, $nbpiece, $idtype, $titre){
-    $sql = "INSERT INTO `biens`(`descript`, `prix`, `adresse`, `ville`,`codeP`,`surfBien`,`surfJardin`, `nbPièce`,`idType`, `titre` ) \n"
-     . "VALUES (:description,:prix,:adresse,:ville,:codepostal,:surfacebien,:surfacejardin,:nbpiece,:idtype,:titre);";
+    $sql = "INSERT INTO `biens`(`descript`, `prix`, `adresse`, `idVilles`,`codeP`,`surfBien`,`surfJardin`, `nbPièce`,`idType`, `titre` ) \n"
+     . "VALUES (:description,:prix,:adresse,:idVille,:codepostal,:surfacebien,:surfacejardin,:nbpiece,:idtype,:titre);";
     $test=$pdo->prepare($sql);
     $test->bindValue(':description',$description,PDO::PARAM_STR);
     $test->bindValue(':prix',$prix,PDO::PARAM_INT);
     $test->bindValue(':adresse',$adresse,PDO::PARAM_STR);
-    $test->bindValue(':ville',$ville,PDO::PARAM_STR);
+    $lesVilles = getAllVille($pdo);
+    $compteur = 0;
+    foreach($lesVilles as $uneVille){
+        if($ville == $uneVille['libelleVille']){
+            $compteur = $compteur + 1;
+        }
+    }
+    if($compteur!=0){
+        $temp = getIdVille($pdo,$ville);
+        $test->bindValue(':idVille',$temp['idVille'],PDO::PARAM_INT);
+    }
+    else{
+        ajoutVille($pdo, $ville);
+        $temp = getIdVille($pdo,$ville);
+        $test->bindValue(':idVille',$temp['idVilles'],PDO::PARAM_INT);
+    }
     $test->bindValue(':codepostal',$codepostal,PDO::PARAM_STR);
     $test->bindValue(':surfacebien',$surfacebien,PDO::PARAM_INT);
     $test->bindValue(':surfacejardin',$surfacejardin,PDO::PARAM_INT);
@@ -317,6 +332,15 @@ function ajouterTranche($pdo){
     $maxi = $mini + 100000;
     $requeteDeux = "INSERT INTO tranche (prixMin,PrixMax) VALUES($mini,$maxi) ;";
     $resultatDeux = $pdo->execute($sql);
+}
+
+function getIdVille($pdo, $ville){
+    $sql = "SELECT idVille from ville WHERE libelleVille = :lv ;";
+    $test=$pdo->prepare($sql);
+    $test->bindValue(':lv', $ville,PDO::PARAM_STR);
+    $test->execute();
+    $idVille = $test->fetch();
+    return $idVille;
 }
 
 /*
