@@ -226,7 +226,7 @@ function editerBien($pdo,$idEdit,$description,$prix,$adresse,$ville,$codepostal,
         $sql.=', adresse = :a';
     }
     if($ville!=''){
-        $sql.=', ville = :v';
+        $sql.=', idVilles = :v';
     }
     if($codepostal!=''){
         $sql.=', codeP = :c';
@@ -260,7 +260,22 @@ function editerBien($pdo,$idEdit,$description,$prix,$adresse,$ville,$codepostal,
         $cmmd->bindValue(':a', $adresse,PDO::PARAM_STR);
     }
     if($ville!=''){
-        $cmmd->bindValue(':v', $ville,PDO::PARAM_STR);
+        $lesVilles = getAllVille($pdo);
+        $compteur = 0;
+        foreach($lesVilles as $uneVille){
+        if($ville == $uneVille['libelleVille']){
+            $compteur = $compteur + 1;
+        }
+        }
+        if($compteur!=0){
+            $temp = getIdVille($pdo,$ville);
+            $cmmd->bindValue(':v',$temp['idVille'],PDO::PARAM_INT);
+        }
+        else{
+            ajoutVille($pdo, $ville);
+            $temp = getIdVille($pdo,$ville);
+            $cmmd->bindValue(':v',$temp['idVille'],PDO::PARAM_INT);
+        }
     }
     if($codepostal!=''){
         $cmmd->bindValue(':c', $codepostal,PDO::PARAM_INT);
