@@ -120,9 +120,13 @@ session_start();
                 </div>
                 <div id="recherche">
                 <?php
-                if (/*isset($_POST["ville"]) ||*/ isset($_POST["type"]) || isset($_POST["jardin"]) || isset($_POST["prix"])){                    
+                if (isset($_POST["ville"]) || isset($_POST["type"]) || isset($_POST["jardin"]) || isset($_POST["prix"])){                    
                     include('../autres/rechercheBien.php');
-                }   
+                }
+                
+                if (isset($_POST["idVille"]) || isset($_POST["surfaceMini"]) || isset($_POST["prix"])){
+                    include('../autres/insertstats.php');
+                }
     	        ?>
                 </div>
 
@@ -132,6 +136,7 @@ session_start();
 
         <?php
         include('../inc/piedDePage.inc');
+        
         ?> 
 
     </body>
