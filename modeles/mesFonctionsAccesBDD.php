@@ -317,7 +317,7 @@ function supprBien($pdo,$id){
 }
 
 function ajoutVille($pdo,$ville){
-    $sql = "INSERT INTO ville (libelle) value(:v)";
+    $sql = "INSERT INTO ville (libelleVille) value(:v)";
     $test=$pdo->prepare($sql);
     $test->bindValue(':v', $ville,PDO::PARAM_STR);
     $test->execute();
