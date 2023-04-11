@@ -124,7 +124,7 @@ session_start();
                     include('../autres/rechercheBien.php');
                 }
                 
-                if (isset($_POST["idVille"]) || isset($_POST["surfaceMini"]) || isset($_POST["prix"])){
+                if (!empty($_POST["idVille"]) || !empty($_POST["surfaceMini"]) || !empty($_POST["prix"])){
                     include('../autres/insertstats.php');
                 }
     	        ?>
