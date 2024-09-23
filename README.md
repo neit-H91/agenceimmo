@@ -1,6 +1,3 @@
-Site Web de l'Agence Immobilière
-Description
-
 Ce projet est une plateforme web développée en PHP permettant de gérer les biens immobiliers, les agents et les recherches des utilisateurs. Il est conçu pour faciliter la gestion des annonces immobilières et offrir aux utilisateurs une interface simple pour rechercher des biens en fonction de plusieurs critères (prix, ville, surface, etc.). Le site inclut également des fonctionnalités de statistiques et de génération de rapports.
 Fonctionnalités principales
 
